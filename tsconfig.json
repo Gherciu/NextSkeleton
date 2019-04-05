@@ -20,6 +20,5 @@
             "components/*": ["./components/*"],
             "layouts/*": ["./components/Layouts/*"]
         }
-    },
-    "exclude": ["node_modules"]
+    }
 }
