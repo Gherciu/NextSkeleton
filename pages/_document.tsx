@@ -10,7 +10,6 @@ class MyDocument extends Document {
         return (
             <Html>
                 <Head>
-                    <style>{`body { margin: 0 } /* custom! */`}</style>
                     <script dangerouslySetInnerHTML={{ __html: `window.localStorage.setItem('__REDUX_STATE__', '${JSON.stringify(state)}')` }} />
                 </Head>
                 <body>

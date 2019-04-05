@@ -1,21 +1,21 @@
-import Link from "next/link";
-import PropTypes from "prop-types";
-import React from "react";
+import Link from 'next/link';
+import PropTypes from 'prop-types';
+import React from 'react';
 interface IMainLayoutProps {
     children: any;
 }
-const MainLayout: React.FC<IMainLayoutProps> = ({ children }) => {
+const MainLayout = ({ children }: IMainLayoutProps) => {
     return (
-        <div className="layout">
+        <div className='layout'>
             <nav>
                 <ul>
                     <li>
-                        <Link href="/">
+                        <Link href='/'>
                             <a>Home</a>
                         </Link>
                     </li>
                     <li>
-                        <Link href="/about">
+                        <Link href='/about'>
                             <a>About</a>
                         </Link>
                     </li>
