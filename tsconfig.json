@@ -3,7 +3,7 @@
         "target": "esnext",
         "module": "esnext",
         "jsx": "preserve",
-        "lib": ["dom", "es2017"],
+        "lib": ["dom", "es2015", "es2016", "es2017"],
         "moduleResolution": "node",
         "allowJs": true,
         "noEmit": true,
@@ -18,7 +18,8 @@
         "baseUrl": "./",
         "paths": {
             "components/*": ["./components/*"],
-            "layouts/*": ["./components/Layouts/*"]
+            "layouts/*": ["./components/Layouts/*"],
+            "store/*": ["./store/*"]
         }
     }
 }

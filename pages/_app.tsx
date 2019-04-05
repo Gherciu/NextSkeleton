@@ -1,13 +1,14 @@
 import App, { Container } from "next/app";
 import React from "react";
 import { Provider } from "react-redux";
-import initializeStore from "../store";
-import reducer from "../store/reducers";
-import state from "../store/state";
-
-const store = initializeStore(reducer, state);
+import store from "store/index";
 
 class MyApp extends App {
+    static async getInitialProps({ Component, ctx }: { Component: any; ctx: any }) {
+        return {
+            pageProps: Component.getInitialProps ? await Component.getInitialProps(ctx) : {}
+        };
+    }
     render() {
         const { Component, pageProps } = this.props;
         return (
