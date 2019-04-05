@@ -1,0 +1,27 @@
+{
+    "name": "nextjs-skeleton",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "NODE_ENV=production next build",
+        "start": "NODE_ENV=development PORT=3000 node ./server/index.js"
+    },
+    "keywords": [],
+    "author": "Gherciu Gheorghe",
+    "license": "ISC",
+    "dependencies": {
+        "next": "^8.0.4",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6"
+    },
+    "devDependencies": {
+        "@types/next": "^7.0.6",
+        "@types/react": "^16.4.16",
+        "@types/react-dom": "16.0.11",
+        "@types/styled-jsx": "^2.2.8",
+        "@zeit/next-sass": "^1.0.1",
+        "@zeit/next-typescript": "^1.1.1",
+        "typescript": "3.2.4"
+    }
+}
