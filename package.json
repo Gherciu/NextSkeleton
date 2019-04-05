@@ -1,44 +1,44 @@
 {
-  "name": "nextjs-skeleton",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "lint": "eslint ./",
-    "lint:fix": "eslint ./ --fix",
-    "build": "NODE_ENV=production next build",
-    "start": "NODE_ENV=development PORT=3000 node ./server/index.js"
-  },
-  "keywords": [],
-  "author": "Gherciu Gheorghe",
-  "license": "ISC",
-  "dependencies": {
-    "next": "^8.0.4",
-    "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-redux": "^6.0.1",
-    "redux-thunk": "^2.3.0",
-    "redux": "^4.0.1"
-  },
-  "devDependencies": {
-    "@types/next": "^7.0.6",
-    "@types/react": "^16.4.16",
-    "@types/react-dom": "16.0.11",
-    "@types/react-redux": "^7.0.6",
-    "@types/redux": "^3.6.0",
-    "@types/styled-jsx": "^2.2.8",
-    "@zeit/next-sass": "^1.0.1",
-    "@zeit/next-typescript": "^1.1.1",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.12.4",
-    "node-sass": "^4.11.0",
-    "redux-devtools-extension": "^2.13.8",
-    "styled-jsx-plugin-sass": "^1.0.0",
-    "stylelint-config-recommended": "^2.1.0",
-    "typescript": "3.2.4"
-  }
+    "name": "nextjs-skeleton",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "lint": "eslint ./",
+        "lint:fix": "eslint ./ --fix",
+        "build": "NODE_ENV=production next build",
+        "start": "NODE_ENV=development PORT=3000 node ./server/index.js"
+    },
+    "keywords": [],
+    "author": "Gherciu Gheorghe",
+    "license": "ISC",
+    "dependencies": {
+        "next": "^8.0.4",
+        "prop-types": "^15.7.2",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "react-redux": "^6.0.1",
+        "redux-thunk": "^2.3.0",
+        "redux": "^4.0.1"
+    },
+    "devDependencies": {
+        "@types/next": "^7.0.6",
+        "@types/react": "^16.4.16",
+        "@types/react-dom": "16.0.11",
+        "@types/react-redux": "^7.0.6",
+        "@types/redux": "^3.6.0",
+        "@types/styled-jsx": "^2.2.8",
+        "@zeit/next-sass": "^1.0.1",
+        "@zeit/next-typescript": "^1.1.1",
+        "eslint": "^5.16.0",
+        "eslint-config-airbnb": "^17.1.0",
+        "eslint-plugin-import": "^2.16.0",
+        "eslint-plugin-jsx-a11y": "^6.2.1",
+        "eslint-plugin-react": "^7.12.4",
+        "node-sass": "^4.11.0",
+        "redux-devtools-extension": "^2.13.8",
+        "styled-jsx-plugin-sass": "^1.0.0",
+        "stylelint-config-recommended": "^2.1.0",
+        "typescript": "3.2.4"
+    }
 }
