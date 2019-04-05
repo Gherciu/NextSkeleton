@@ -1,10 +1,11 @@
-import state from "store/state";
+import actionTypes from 'store/actionTypes';
+import state from 'store/state';
 export default (count = state.count, action: any) => {
     switch (action.type) {
-        case "INCREMENT": {
+        case actionTypes.INCREMENT: {
             return count + 1;
         }
-        case "DECREMENT": {
+        case actionTypes.DECREMENT: {
             return count - 1;
         }
         default:
