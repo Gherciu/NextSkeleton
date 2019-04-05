@@ -19,7 +19,9 @@
         "react-dom": "^16.8.6",
         "react-redux": "^6.0.1",
         "redux-thunk": "^2.3.0",
-        "redux": "^4.0.1"
+        "redux": "^4.0.1",
+        "@zeit/next-sass": "^1.0.1",
+        "@zeit/next-typescript": "^1.1.1"
     },
     "devDependencies": {
         "@types/next": "^7.0.6",
@@ -28,8 +30,6 @@
         "@types/react-redux": "^7.0.6",
         "@types/redux": "^3.6.0",
         "@types/styled-jsx": "^2.2.8",
-        "@zeit/next-sass": "^1.0.1",
-        "@zeit/next-typescript": "^1.1.1",
         "eslint": "^5.16.0",
         "eslint-config-airbnb": "^17.1.0",
         "eslint-plugin-import": "^2.16.0",

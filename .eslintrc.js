@@ -16,10 +16,9 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: [
-    'react',
-    'prettier',
+    'react'
   ],
   rules: {
-    "prettier/prettier": "error"
+    "no-param-reassign": 0
   },
 };
