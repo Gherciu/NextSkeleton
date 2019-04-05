@@ -27,6 +27,13 @@ const MainLayout: React.FC<IMainLayoutProps> = ({ children }) => {
                     background: #eaeaea;
                     width: 100vw;
                     min-height: 100vh;
+                    ul {
+                        display: flex;
+                        align-items: center;
+                        li {
+                            margin: 0px 10px;
+                        }
+                    }
                 }
             `}</style>
         </div>
