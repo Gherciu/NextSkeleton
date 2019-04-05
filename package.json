@@ -21,7 +21,8 @@
         "redux-thunk": "^2.3.0",
         "redux": "^4.0.1",
         "@zeit/next-sass": "^1.0.1",
-        "@zeit/next-typescript": "^1.1.1"
+        "@zeit/next-typescript": "^1.1.1",
+        "redux-devtools-extension": "^2.13.8"
     },
     "devDependencies": {
         "@types/next": "^7.0.6",
@@ -30,13 +31,14 @@
         "@types/react-redux": "^7.0.6",
         "@types/redux": "^3.6.0",
         "@types/styled-jsx": "^2.2.8",
+        "@typescript-eslint/eslint-plugin": "^1.6.0",
+        "@typescript-eslint/parser": "^1.6.0",
         "eslint": "^5.16.0",
         "eslint-config-airbnb": "^17.1.0",
         "eslint-plugin-import": "^2.16.0",
         "eslint-plugin-jsx-a11y": "^6.2.1",
         "eslint-plugin-react": "^7.12.4",
         "node-sass": "^4.11.0",
-        "redux-devtools-extension": "^2.13.8",
         "styled-jsx-plugin-sass": "^1.0.0",
         "stylelint-config-recommended": "^2.1.0",
         "typescript": "3.2.4"
