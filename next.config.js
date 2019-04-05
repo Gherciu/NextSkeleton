@@ -5,7 +5,7 @@ module.exports = withTypescript(
     withSass({
         webpack: (config, options) => {
             config.resolve.alias["components"] = path.join(__dirname, "components");
-            config.resolve.alias["layouts"] = path.join(__dirname, "components/layouts");
+            config.resolve.alias["layouts"] = path.join(__dirname, "components/Layouts");
             return config;
         }
     })

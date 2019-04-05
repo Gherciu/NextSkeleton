@@ -23,6 +23,7 @@
         "@types/styled-jsx": "^2.2.8",
         "@zeit/next-sass": "^1.0.1",
         "@zeit/next-typescript": "^1.1.1",
+        "babel-plugin-inline-react-svg": "^1.0.1",
         "node-sass": "^4.11.0",
         "styled-jsx-plugin-sass": "^1.0.0",
         "typescript": "3.2.4"
