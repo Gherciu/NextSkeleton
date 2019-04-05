@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -7,6 +8,10 @@ interface IMainLayoutProps {
 const MainLayout = ({ children }: IMainLayoutProps) => {
     return (
         <div className='layout'>
+            <Head>
+                <title>nextjs+typescript</title>
+                <link rel='shortcut icon' href='/static/favicon.ico' type='image/x-icon' />
+            </Head>
             <nav>
                 <ul>
                     <li>
