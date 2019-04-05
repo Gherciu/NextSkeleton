@@ -1,7 +1,7 @@
-import App, { Container } from "next/app";
-import React from "react";
-import { Provider } from "react-redux";
-import store from "store/index";
+import App, { Container } from 'next/app';
+import React from 'react';
+import { Provider } from 'react-redux';
+import store from 'store/index';
 
 class MyApp extends App {
     static async getInitialProps({ Component, ctx }: { Component: any; ctx: any }) {
@@ -9,6 +9,7 @@ class MyApp extends App {
             pageProps: Component.getInitialProps ? await Component.getInitialProps(ctx) : {}
         };
     }
+
     render() {
         const { Component, pageProps } = this.props;
         return (

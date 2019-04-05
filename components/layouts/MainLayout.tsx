@@ -2,32 +2,33 @@ import Head from 'next/head';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 import React from 'react';
+
 interface IMainLayoutProps {
     children: any;
 }
-const MainLayout = ({ children }: IMainLayoutProps) => {
-    return (
-        <div className='layout'>
-            <Head>
-                <title>nextjs+typescript</title>
-                <link rel='shortcut icon' href='/static/favicon.ico' type='image/x-icon' />
-            </Head>
-            <nav>
-                <ul>
-                    <li>
-                        <Link href='/'>
-                            <a>Home</a>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href='/about'>
-                            <a>About</a>
-                        </Link>
-                    </li>
-                </ul>
-            </nav>
-            {children}
-            <style jsx>{`
+const MainLayout = ({ children }: IMainLayoutProps) => (
+    <div className="layout">
+        <Head>
+            <title>nextjs+typescript</title>
+            <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
+        </Head>
+        <nav>
+            <ul>
+                <li>
+                    <Link href="/">
+                        <a>Home</a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/about">
+                        <a>About</a>
+                    </Link>
+                </li>
+            </ul>
+        </nav>
+        {children}
+        <style jsx>
+            {`
                 .layout {
                     background: #eaeaea;
                     width: 100vw;
@@ -40,10 +41,10 @@ const MainLayout = ({ children }: IMainLayoutProps) => {
                         }
                     }
                 }
-            `}</style>
-        </div>
-    );
-};
+            `}
+        </style>
+    </div>
+);
 MainLayout.propTypes = {
     children: PropTypes.any
 };
