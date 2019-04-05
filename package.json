@@ -14,16 +14,21 @@
         "next": "^8.0.4",
         "prop-types": "^15.7.2",
         "react": "^16.8.6",
-        "react-dom": "^16.8.6"
+        "react-dom": "^16.8.6",
+        "react-redux": "^6.0.1",
+        "redux": "^4.0.1"
     },
     "devDependencies": {
         "@types/next": "^7.0.6",
         "@types/react": "^16.4.16",
         "@types/react-dom": "16.0.11",
+        "@types/redux": "^3.6.0",
         "@types/styled-jsx": "^2.2.8",
         "@zeit/next-sass": "^1.0.1",
         "@zeit/next-typescript": "^1.1.1",
         "node-sass": "^4.11.0",
+        "redux-devtools-extension": "^2.13.8",
+        "redux-thunk": "^2.3.0",
         "styled-jsx-plugin-sass": "^1.0.0",
         "typescript": "3.2.4"
     }
