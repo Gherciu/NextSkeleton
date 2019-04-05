@@ -19,6 +19,7 @@ module.exports = {
     'react'
   ],
   rules: {
-    "no-param-reassign": 0
+    "no-param-reassign": 0,
+    "indent":["error",4]
   },
 };
