@@ -1,7 +1,7 @@
-const isServer = typeof window === "undefined";
+const isServer = typeof window === 'undefined';
 const defaultState = {
     count: 0
 };
-const stateFromServer = !isServer && window.localStorage.getItem("__REDUX_STATE__");
-const state = isServer ? defaultState : stateFromServer;
+const stateFromServer = !isServer && window.localStorage.getItem('__REDUX_STATE__');
+const state = isServer ? defaultState : JSON.parse(stateFromServer);
 export default state;
