@@ -1,27 +1,19 @@
 import App, { Container } from 'next/app';
+import { NextContext, NextFunctionComponent } from 'next';
 import React from 'react';
 import { Provider } from 'react-redux';
 import store from 'store/index';
 import 'normalize.css';
 import 'styles/main.css';
 
-class MyApp extends App {
-    static async getInitialProps({ Component, ctx }: { Component: any; ctx: any }) {
-        return {
-            pageProps: Component.getInitialProps ? await Component.getInitialProps(ctx) : {},
-        };
-    }
-
-    render() {
-        const { Component, pageProps } = this.props;
-        return (
-            <Container>
-                <Provider store={store}>
-                    <Component {...pageProps} />
-                </Provider>
-            </Container>
-        );
-    }
-}
-
+const MyApp = ({ Component, pageProps }: any) => (
+    <Container>
+        <Provider store={store}>
+            <Component {...pageProps} />
+        </Provider>
+    </Container>
+);
+MyApp.getInitialProps = async ({ Component, ctx }: { Component: any; ctx: NextContext }) => ({
+    pageProps: Component.getInitialProps ? await Component.getInitialProps(ctx) : {},
+});
 export default MyApp;

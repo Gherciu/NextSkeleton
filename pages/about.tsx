@@ -3,11 +3,12 @@ import ReduxCounter from 'components/ReduxCounter/';
 import MainLayout from 'components/Layouts/';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { NextFunctionComponent } from 'next';
 
 interface IAboutProps {
     text: string;
 }
-const About = ({ text }: IAboutProps) => (
+const About: NextFunctionComponent<IAboutProps> = ({ text }: IAboutProps) => (
     <MainLayout>
         <h1>About page</h1>
         <h2>{text}</h2>

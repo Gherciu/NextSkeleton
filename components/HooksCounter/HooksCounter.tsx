@@ -1,16 +1,13 @@
 import React, { useCallback, useState } from 'react';
 
-interface IHooksCounter {
-    count: number;
-}
 const HooksCounter = () => {
-    const [state, setCount] = useState<IHooksCounter>({ count: 0 });
+    const [count, setCount] = useState<number>(0);
     const onCounterClick = useCallback(() => {
-        setCount({ count: state.count + 1 });
-    }, [state]);
+        setCount(count + 1);
+    }, [count]);
     return (
         <div onClick={onCounterClick} style={{ cursor: 'pointer' }}>
-            Click to increment HooksCounter:{state.count}
+            Click to increment HooksCounter:{count}
         </div>
     );
 };

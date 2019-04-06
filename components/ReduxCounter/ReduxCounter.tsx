@@ -6,13 +6,13 @@ interface IReduxCounter {
     count: number;
     dispatch: any;
 }
-const ReduxCounter = ({ count, dispatch }: IReduxCounter) => {
+const ReduxCounter: React.FC<IReduxCounter> = ({ count, dispatch }: IReduxCounter) => {
     const onCounterClick = () => {
         dispatch({ type: 'INCREMENT' });
     };
     return <div onClick={onCounterClick}>Click to increment ReduxCounter:{count}</div>;
 };
-ReduxCounter.protoTypes = {
+ReduxCounter.propTypes = {
     count: PropTypes.number.isRequired,
 };
 export default connect((state: { count: any }) => ({ count: state.count }))(ReduxCounter);

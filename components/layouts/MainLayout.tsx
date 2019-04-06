@@ -6,7 +6,7 @@ import React from 'react';
 interface IMainLayoutProps {
     children: any;
 }
-const MainLayout = ({ children }: IMainLayoutProps) => (
+const MainLayout: React.FC<IMainLayoutProps> = ({ children }: IMainLayoutProps) => (
     <div className='layout'>
         <Head>
             <title>nextjs+typescript</title>
