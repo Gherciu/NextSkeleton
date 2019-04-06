@@ -15,10 +15,10 @@ const getOrCreateStore = () => {
     if (isServer) {
         return initializeStore(state);
     }
-    if (!window.__REDUX_STORE__) {
-        window.__REDUX_STORE__ = initializeStore(state);
+    if (!(window as any).__REDUX_STORE__) {
+        (window as any).__REDUX_STORE__ = initializeStore(state);
     }
-    return window.__REDUX_STORE__;
+    return (window as any).__REDUX_STORE__;
 };
 const store = getOrCreateStore();
 export default store;
