@@ -6,7 +6,6 @@ module.exports = withTypescript(
     withCSS({
         webpack: config => {
             config.resolve.alias.components = path.join(__dirname, 'components');
-            config.resolve.alias.layouts = path.join(__dirname, 'components/Layouts');
             config.resolve.alias.styles = path.join(__dirname, 'static/styles');
             config.resolve.alias.store = path.join(__dirname, 'store');
             return config;

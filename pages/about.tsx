@@ -1,6 +1,6 @@
-import HooksCounter from 'components/HooksCounter';
-import ReduxCounter from 'components/ReduxCounter';
-import MainLayout from 'layouts/MainLayout';
+import HooksCounter from 'components/HooksCounter/';
+import ReduxCounter from 'components/ReduxCounter/';
+import MainLayout from 'components/Layouts/';
 import PropTypes from 'prop-types';
 import React from 'react';
 
