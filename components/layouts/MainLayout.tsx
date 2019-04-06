@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 import React from 'react';
+import logo from 'static/logo.svg';
 import RootLayout from './RootLayout';
 import './MainLayout.scss';
-import logo from '../../static/logo.svg';
 
 interface IMainLayoutProps {
     children: any;

@@ -9,6 +9,7 @@ module.exports = withTypescript(
             webpack: config => {
                 config.resolve.alias.components = path.join(__dirname, 'components');
                 config.resolve.alias.store = path.join(__dirname, 'store');
+                config.resolve.alias.static = path.join(__dirname, 'static');
                 return config;
             }
         })
