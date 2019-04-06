@@ -4,6 +4,21 @@ declare module '*.scss' {
 }
 
 declare module '*.svg' {
-    const content: {[src: string]: string};
+    const content: string;
+    export = content;
+}
+
+declare module '*.jpg' {
+    const content: string;
+    export = content;
+}
+
+declare module '*.jpeg' {
+    const content: string;
+    export = content;
+}
+
+declare module '*.png' {
+    const content: string;
     export = content;
 }

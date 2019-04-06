@@ -1,11 +1,22 @@
 .main-layout {
     width: 100%;
     background: #eaeaea;
-    ul {
-        display: flex;
-        align-items: center;
-        li {
-            margin-left: 20px;
+    nav {
+        padding: 20px;
+        ul {
+            display: flex;
+            align-items: center;
+            li {
+                margin-left: 20px;
+                list-style: none;
+                a {
+                    height: 100%;
+                    display: block;
+                    .logo {
+                        max-width: 50px;
+                    }
+                }
+            }
         }
     }
 }
