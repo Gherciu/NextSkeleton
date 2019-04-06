@@ -1,5 +1,4 @@
-const { createServer } = require('http');
-const { parse } = require('url');
+const express = require('express');
 const next = require('next');
 
 const dev = process.env.NODE_ENV !== 'production';
@@ -8,10 +7,12 @@ const app = next({ dev });
 const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
-    createServer((req, res) => {
-        const parsedUrl = parse(req.url, true);
-        handle(req, res, parsedUrl);
-    }).listen(port, err => {
+    const server = express();
+
+    server.get('*', (req, res) => handle(req, res));
+
+    server.listen(port, err => {
         if (err) throw err;
+        console.log(`> Ready on http://localhost:${port}`); // eslint-disable-line no-console
     });
 });

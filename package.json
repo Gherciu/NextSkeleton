@@ -16,9 +16,10 @@
     "license": "ISC",
     "dependencies": {
         "@zeit/next-sass": "^1.0.1",
-        "next-images": "^1.1.1",
         "@zeit/next-typescript": "^1.1.1",
+        "express": "^4.16.4",
         "next": "^8.0.4",
+        "next-images": "^1.1.1",
         "normalize.css": "^8.0.1",
         "prop-types": "^15.7.2",
         "react": "^16.8.6",
