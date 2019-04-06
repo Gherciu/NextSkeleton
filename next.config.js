@@ -1,3 +1,4 @@
+require('dotenv').config();
 const path = require('path');
 const withTypescript = require('@zeit/next-typescript');
 const withSASS = require('@zeit/next-sass');

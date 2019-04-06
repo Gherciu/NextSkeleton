@@ -6,9 +6,9 @@
     "scripts": {
         "lint": "eslint ./",
         "lint:fix": "eslint ./ --fix",
-        "build": "NODE_ENV=production next build",
-        "start:dev": "NODE_ENV=development PORT=3000 node ./server/index.js",
-        "start:prod": "pm2 start ./ecosystem.json --env production",
+        "build": "next build",
+        "start:dev": "node ./server/index.js",
+        "start:prod": "pm2 start ./ecosystem.json",
         "stop:prod": "pm2 stop ./ecosystem.json"
     },
     "keywords": [],
@@ -17,6 +17,7 @@
     "dependencies": {
         "@zeit/next-sass": "^1.0.1",
         "@zeit/next-typescript": "^1.1.1",
+        "dotenv": "^7.0.0",
         "express": "^4.16.4",
         "next": "^8.0.4",
         "next-images": "^1.1.1",
