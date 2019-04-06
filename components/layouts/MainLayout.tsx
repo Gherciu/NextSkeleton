@@ -2,12 +2,13 @@ import Head from 'next/head';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 import React from 'react';
+import scss from './MainLayout.scss';
 
 interface IMainLayoutProps {
     children: any;
 }
 const MainLayout: React.FC<IMainLayoutProps> = ({ children }: IMainLayoutProps) => (
-    <div className='layout'>
+    <div className={scss.MainLayout}>
         <Head>
             <title>nextjs+typescript</title>
             <link rel='shortcut icon' href='/static/favicon.ico' type='image/x-icon' />
@@ -27,21 +28,6 @@ const MainLayout: React.FC<IMainLayoutProps> = ({ children }: IMainLayoutProps) 
             </ul>
         </nav>
         {children}
-        <style jsx>
-            {`
-                .layout {
-                    background: #eaeaea;
-                    padding: 20px;
-                    ul {
-                        display: flex;
-                        align-items: center;
-                        li {
-                            margin: 0px 10px;
-                        }
-                    }
-                }
-            `}
-        </style>
     </div>
 );
 MainLayout.propTypes = {
