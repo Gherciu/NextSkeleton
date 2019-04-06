@@ -6,7 +6,9 @@ module.exports = {
   },
   extends: [
     'airbnb',
-    'plugin:@typescript-eslint/recommended' // Uses the recommended rules from the @typescript-eslint/eslint-plugin
+    'plugin:@typescript-eslint/recommended', // Uses the recommended rules from the @typescript-eslint/eslint-plugin
+    'prettier/@typescript-eslint',  // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
+    'plugin:prettier/recommended',  // Enables eslint-plugin-prettier and displays prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
   ],
   globals: {
     Atomics: 'readonly',
@@ -25,7 +27,6 @@ module.exports = {
   ],
   rules: {
     "no-param-reassign": 0,
-    "indent":["error",4, { "SwitchCase": 1 }], //tab width
     "react/jsx-indent":["error", 4],//jsx tab width
     "react/forbid-prop-types":0, //to use prop-types (any,object,array)
     "react/require-default-props":0, 
@@ -40,7 +41,6 @@ module.exports = {
     "@typescript-eslint/explicit-member-accessibility":0,//to use classes without public,privat,protected
     "import/no-unresolved":false, //not work corect with alliases
     "no-underscore-dangle": 0, //This rule disallows dangling underscores in identifiers.
-    "comma-dangle": ["error", "never"], //This rule enforces consistent use of trailing commas in object and array literals.
     "no-nested-ternary":0,//to use nested ternary operator
     "jsx-a11y/no-static-element-interactions":0,
     "jsx-a11y/click-events-have-key-events":0
