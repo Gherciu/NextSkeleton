@@ -30,6 +30,7 @@ module.exports = {
     "react/forbid-prop-types":0, //to use prop-types (any,object,array)
     "react/require-default-props":0, 
     "react/no-danger":0, //to use dangerouslySetInnerHtml
+    "react/jsx-one-expression-per-line":0,//to use <div> count: {count} </div> inline
     "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".jsx"] }], //allowed jsx files extensions
     "jsx-a11y/anchor-is-valid":0, //to use <a>link</a> without href
     "@typescript-eslint/no-var-requires":true, //to use require
@@ -40,7 +41,9 @@ module.exports = {
     "import/no-unresolved":false, //not work corect with alliases
     "no-underscore-dangle": 0, //This rule disallows dangling underscores in identifiers.
     "comma-dangle": ["error", "never"], //This rule enforces consistent use of trailing commas in object and array literals.
-    "no-nested-ternary":0//to use nested ternary operator
+    "no-nested-ternary":0,//to use nested ternary operator
+    "jsx-a11y/no-static-element-interactions":0,
+    "jsx-a11y/click-events-have-key-events":0
   },
   settings:  {
     react:  {
