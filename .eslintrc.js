@@ -32,6 +32,7 @@ module.exports = {
     "react/jsx-one-expression-per-line":0,//to use <div> count: {count} </div> inline
     "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".jsx"] }], //allowed jsx files extensions
     "jsx-a11y/anchor-is-valid":0, //to use <a>link</a> without href
+    "jsx-quotes": ["error", "prefer-single"],//jsx quotes to single
     "@typescript-eslint/no-var-requires":true, //to use require
     "@typescript-eslint/explicit-function-return-type":false, //not explicite function return type
     "@typescript-eslint/interface-name-prefix":[true, "always-prefix"],//requires interface names to start with an “I”
@@ -40,8 +41,11 @@ module.exports = {
     "import/no-unresolved":false, //not work corect with alliases
     "no-underscore-dangle": 0, //This rule disallows dangling underscores in identifiers.
     "no-nested-ternary":0,//to use nested ternary operator
+    "comma-dangle":0,//comma on end of array,objects items
     "jsx-a11y/no-static-element-interactions":0,
-    "jsx-a11y/click-events-have-key-events":0
+    "jsx-a11y/click-events-have-key-events":0,
+    "arrow-parens": ["error", "as-needed"], //use parantese for arrow functions as-neded
+    "object-curly-newline": ["error", { "consistent": true }] //This rule enforces consistent line breaks inside braces of object literals or destructuring assignments.
   },
   settings:  {
     react:  {
