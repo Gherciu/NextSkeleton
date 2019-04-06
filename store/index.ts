@@ -5,7 +5,9 @@ import reducer from 'store/reducers';
 import state from 'store/state';
 
 const isServer = typeof window === 'undefined';
-const initializeStore = (initialState: any) => createStore(reducer, initialState, composeWithDevTools(applyMiddleware(thunkMiddleware)));
+const initializeStore = (initialState: any) => (
+    createStore(reducer, initialState, composeWithDevTools(applyMiddleware(thunkMiddleware)))
+);
 
 const getOrCreateStore = () => {
     if (isServer) {
