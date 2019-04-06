@@ -8,7 +8,8 @@
         "lint:fix": "eslint ./ --fix",
         "build": "NODE_ENV=production next build",
         "start:dev": "NODE_ENV=development PORT=3000 node ./server/index.js",
-        "start:prod": "pm2 restart ./ecosystem.json --env production"
+        "start:prod": "pm2 start ./ecosystem.json --env production",
+        "stop:prod": "pm2 stop ./ecosystem.json"
     },
     "keywords": [],
     "author": "Gherciu Gheorghe",
