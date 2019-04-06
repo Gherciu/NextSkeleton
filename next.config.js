@@ -11,5 +11,5 @@ module.exports = withTypescript(
             config.resolve.alias.store = path.join(__dirname, 'store');
             return config;
         },
-    }),
+    })
 );
