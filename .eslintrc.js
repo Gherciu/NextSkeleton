@@ -1,19 +1,20 @@
 module.exports = {
-  parser:  '@typescript-eslint/parser',
+  parser:  '@typescript-eslint/parser', //comment this line to disable ts
   env: {  
     browser: true,
     es6: true
   },
   extends: [
     'airbnb',
-    'plugin:@typescript-eslint/recommended', // Uses the recommended rules from the @typescript-eslint/eslint-plugin
+    // Uses the recommended rules from the @typescript-eslint/eslint-plugin 
+    'plugin:@typescript-eslint/recommended', //comment this line to disable ts
   ],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'
   },
   parserOptions: {
-    project: "./tsconfig.json",
+    project: "./tsconfig.json", //comment this line to disable ts
     ecmaFeatures: {
       jsx: true
     },
