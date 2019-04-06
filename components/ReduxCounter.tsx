@@ -10,13 +10,9 @@ const ReduxCounter = ({ count, dispatch }: IReduxCounter) => {
     const onCounterClick = () => {
         dispatch({ type: 'INCREMENT' });
     };
-    return (
-        <div onClick={onCounterClick}>
-            Click to increment ReduxCounter:{count}
-        </div>
-    );
+    return <div onClick={onCounterClick}>Click to increment ReduxCounter:{count}</div>;
 };
 ReduxCounter.protoTypes = {
-    count: PropTypes.number.isRequired
+    count: PropTypes.number.isRequired,
 };
-export default connect((state: {count: any}) => ({ count: state.count }))(ReduxCounter);
+export default connect((state: { count: any }) => ({ count: state.count }))(ReduxCounter);

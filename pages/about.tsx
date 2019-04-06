@@ -18,6 +18,6 @@ const About = ({ text }: IAboutProps) => (
 );
 About.getInitialProps = async () => ({ text: 'About page description' });
 About.propTypes = {
-    text: PropTypes.string.isRequired
+    text: PropTypes.string.isRequired,
 };
 export default About;

@@ -18,6 +18,6 @@ const App = ({ text }: IAppProps) => (
 );
 App.getInitialProps = async () => ({ text: 'Home page description' });
 App.propTypes = {
-    text: PropTypes.string.isRequired
+    text: PropTypes.string.isRequired,
 };
 export default App;

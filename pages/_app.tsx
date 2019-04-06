@@ -6,7 +6,7 @@ import store from 'store/index';
 class MyApp extends App {
     static async getInitialProps({ Component, ctx }: { Component: any; ctx: any }) {
         return {
-            pageProps: Component.getInitialProps ? await Component.getInitialProps(ctx) : {}
+            pageProps: Component.getInitialProps ? await Component.getInitialProps(ctx) : {},
         };
     }
 

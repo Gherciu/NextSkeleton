@@ -7,20 +7,20 @@ interface IMainLayoutProps {
     children: any;
 }
 const MainLayout = ({ children }: IMainLayoutProps) => (
-    <div className="layout">
+    <div className='layout'>
         <Head>
             <title>nextjs+typescript</title>
-            <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
+            <link rel='shortcut icon' href='/static/favicon.ico' type='image/x-icon' />
         </Head>
         <nav>
             <ul>
                 <li>
-                    <Link href="/">
+                    <Link href='/'>
                         <a>Home</a>
                     </Link>
                 </li>
                 <li>
-                    <Link href="/about">
+                    <Link href='/about'>
                         <a>About</a>
                     </Link>
                 </li>
@@ -46,6 +46,6 @@ const MainLayout = ({ children }: IMainLayoutProps) => (
     </div>
 );
 MainLayout.propTypes = {
-    children: PropTypes.any
+    children: PropTypes.any,
 };
 export default MainLayout;
