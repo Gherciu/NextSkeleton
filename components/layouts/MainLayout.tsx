@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import NavLink from 'components/NavLink';
 import PropTypes from 'prop-types';
 import React from 'react';
 import logo from 'static/logo.svg';
@@ -14,25 +14,19 @@ const MainLayout: React.FC<IMainLayoutProps> = ({ children }: IMainLayoutProps) 
             <nav>
                 <ul>
                     <li>
-                        <Link href='/'>
-                            <a>
-                                <img className='logo' src={logo} alt='logo' />
-                            </a>
-                        </Link>
+                        <NavLink href='/'>
+                            <img className='logo' src={logo} alt='logo' />
+                        </NavLink>
                     </li>
                     <li>
-                        <Link href='/'>
-                            <a>
-                                Home
-                            </a>
-                        </Link>
+                        <NavLink href='/'>
+                            Home
+                        </NavLink>
                     </li>
                     <li>
-                        <Link href='/about'>
-                            <a>
-                                About
-                            </a>
-                        </Link>
+                        <NavLink href='/about'>
+                            About
+                        </NavLink>
                     </li>
                 </ul>
             </nav>
