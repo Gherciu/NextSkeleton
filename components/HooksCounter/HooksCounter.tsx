@@ -6,8 +6,15 @@ const HooksCounter = () => {
         setCount(count + 1);
     }, [count]);
     return (
-        <div onClick={onCounterClick} style={{ cursor: 'pointer' }}>
+        <div onClick={onCounterClick} className='hooks-counter'>
             Click to increment HooksCounter:{count}
+            <style jsx>
+                {`
+                    .hooks-counter{
+                        cursor: pointer;
+                    }
+                `}
+            </style>
         </div>
     );
 };
