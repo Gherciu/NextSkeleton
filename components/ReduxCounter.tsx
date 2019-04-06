@@ -19,4 +19,4 @@ const ReduxCounter = ({ count, dispatch }: IReduxCounter) => {
 ReduxCounter.protoTypes = {
     count: PropTypes.number.isRequired
 };
-export default connect(s => ({ count: s.count }))(ReduxCounter);
+export default connect((state: {count: any}) => ({ count: state.count }))(ReduxCounter);
