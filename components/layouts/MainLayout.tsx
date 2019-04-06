@@ -31,6 +31,7 @@ const MainLayout = ({ children }: IMainLayoutProps) => (
             {`
                 .layout {
                     background: #eaeaea;
+                    padding: 20px;
                     ul {
                         display: flex;
                         align-items: center;
