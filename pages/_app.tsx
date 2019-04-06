@@ -2,8 +2,6 @@ import App, { Container } from 'next/app';
 import React from 'react';
 import { Provider } from 'react-redux';
 import store from 'store/index';
-import 'normalize.css';
-import 'styles/main.css';
 
 class MyApp extends App {
     static async getInitialProps({ Component, ctx }: { Component: any; ctx: any }) {

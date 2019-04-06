@@ -1,4 +1,4 @@
-import Document, { Head, Html, Main, NextScript } from 'next/document';
+import Document, { Head, Main, NextScript } from 'next/document';
 import React from 'react';
 import state from 'store/state';
 
@@ -10,7 +10,7 @@ class MyDocument extends Document {
 
     render() {
         return (
-            <Html>
+            <html lang='en'>
                 <Head>
                     <script dangerouslySetInnerHTML={{ __html: `window.localStorage.setItem('__REDUX_STATE__', '${JSON.stringify(state)}')` }} />
                 </Head>
@@ -18,7 +18,7 @@ class MyDocument extends Document {
                     <Main />
                     <NextScript />
                 </body>
-            </Html>
+            </html>
         );
     }
 }
