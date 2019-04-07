@@ -12,6 +12,11 @@ const MainLayout = ({ children }) => (
                 <ul>
                     <li>
                         <NavLink href='/'>
+                            {process.env.APP_NAME}
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink href='/'>
                             <img className='logo' src={logo} alt='logo' />
                         </NavLink>
                     </li>
