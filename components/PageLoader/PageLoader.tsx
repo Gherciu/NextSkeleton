@@ -1,16 +1,23 @@
 import PropTypes from 'prop-types';
-import { PageTransition } from 'next-page-transitions';
-import React from 'react';
+import React, { useEffect } from 'react';
+import Router from 'next/router';
+import NProgress from 'nprogress';
 import './PageLoader.scss';
 
 interface IPageLoaderProps {
     children: any;
 }
-const PageLoader: React.FC<IPageLoaderProps> = ({ children }: IPageLoaderProps) => (
-    <PageTransition timeout={300} classNames='page-loader'>
-        { children }
-    </PageTransition>
-);
+const PageLoader: React.FC<IPageLoaderProps> = ({ children }: IPageLoaderProps) => {
+    useEffect(() => {
+        Router.events.on('routeChangeStart', (url: string) => {
+            console.log(`Loading: ${url}`); // eslint-disable-line
+            NProgress.start();
+        });
+        Router.events.on('routeChangeComplete', () => NProgress.done());
+        Router.events.on('routeChangeError', () => NProgress.done());
+    }, []);
+    return (<div className='page-loader'>{ children }</div>);
+};
 PageLoader.propTypes = {
     children: PropTypes.any
 };
