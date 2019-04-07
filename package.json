@@ -1,20 +1,25 @@
 {
     "name": "nextjs-skeleton",
     "version": "1.0.0",
-    "description": "",
+    "description": "A  skeleton for nextjs apps",
     "main": "./server/index.js",
     "scripts": {
         "lint:scripts": "./node_modules/.bin/eslint ./",
         "fix:scripts": "./node_modules/.bin/eslint ./ --fix",
+        "lint:all": "npm run lint:scripts && npm run lint:styles",
+        "fix:all": "npm run fix:scripts && npm run fix:styles",
         "lint:styles": "./node_modules/.bin/stylelint \"./components/**/*.scss\" --syntax scss",
         "fix:styles": "./node_modules/.bin/stylelint \"./components/**/*.scss\" --fix",
         "build": "./node_modules/.bin/next build",
         "start:dev": "node ./server/index.js",
         "start:prod": "./node_modules/.bin/pm2 start ./ecosystem.json",
         "stop:prod": "./node_modules/.bin/pm2 stop ./ecosystem.json",
-        "install:clean": "rm -rf ./node_modules & rm -rf package-lock.json & npm i"
+        "install:clean": "rm -rf ./node_modules && rm -rf package-lock.json && npm i"
     },
-    "keywords": [],
+    "keywords": [
+        "nextjs",
+        "nextjs-skeleton"
+    ],
     "author": "Gherciu Gheorghe",
     "license": "ISC",
     "dependencies": {
