@@ -1,9 +1,13 @@
-@import './../_vars.scss';
+@import './../vars';
+@import './../mixins';
 
 .main-layout {
     width: 100%;
     min-height: 100vh;
     background: $light;
+    @include mobile {
+        background: #000;
+    }
     nav {
         padding: 20px;
         ul {
