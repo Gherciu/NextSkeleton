@@ -1,0 +1,14 @@
+.page-loader-enter {
+    opacity: 0;
+}
+.page-loader-enter-active {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+.page-loader-exit {
+    opacity: 1;
+}
+.page-loader-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
+}
