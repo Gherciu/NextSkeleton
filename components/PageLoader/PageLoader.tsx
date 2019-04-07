@@ -9,8 +9,7 @@ interface IPageLoaderProps {
 }
 const PageLoader: React.FC<IPageLoaderProps> = ({ children }: IPageLoaderProps) => {
     useEffect(() => {
-        Router.events.on('routeChangeStart', (url: string) => {
-            console.log(`Loading: ${url}`); // eslint-disable-line
+        Router.events.on('routeChangeStart', () => {
             NProgress.start();
         });
         Router.events.on('routeChangeComplete', () => NProgress.done());
