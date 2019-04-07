@@ -4,12 +4,13 @@
     "description": "",
     "main": "./server/index.js",
     "scripts": {
-        "lint": "eslint ./",
-        "lint:fix": "eslint ./ --fix",
-        "build": "next build",
+        "lint": "./node_modules/.bin/eslint ./",
+        "lint:fix": "./node_modules/.bin/eslint ./ --fix",
+        "build": "./node_modules/.bin/next build",
         "start:dev": "node ./server/index.js",
-        "start:prod": "pm2 start ./ecosystem.json",
-        "stop:prod": "pm2 stop ./ecosystem.json"
+        "start:prod": "./node_modules/.bin/pm2 start ./ecosystem.json",
+        "stop:prod": "./node_modules/.bin/pm2 stop ./ecosystem.json",
+        "install:clean": "rm -rf ./node_modules & rm -rf package-lock.json & npm i"
     },
     "keywords": [],
     "author": "Gherciu Gheorghe",
