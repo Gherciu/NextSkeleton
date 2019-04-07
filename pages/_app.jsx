@@ -3,6 +3,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import store from 'store/index';
 import PageLoader from 'components/PageLoader/';
+import 'components/_global.scss';
 
 class MyApp extends App {
     static async getInitialProps({ Component, ctx }) {

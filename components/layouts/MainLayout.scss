@@ -1,6 +1,9 @@
+@import './../_vars.scss';
+
 .main-layout {
     width: 100%;
-    background: #eaeaea;
+    min-height: 100vh;
+    background: $light;
     nav {
         padding: 20px;
         ul {
