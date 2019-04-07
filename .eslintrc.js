@@ -25,7 +25,6 @@ module.exports = {
     "no-param-reassign": 0, // use param.a = 1 to use ressign
     "react/jsx-indent":["error", 4],//jsx tab width
     "react/forbid-prop-types":0, //to use prop-types (any,object,array)
-    "react/require-default-props":0, 
     "react/no-danger":0, //to use dangerouslySetInnerHtml
     "react/jsx-one-expression-per-line":0,//to use <div> count: {count} </div> inline
     "react/jsx-filename-extension": [1, { "extensions": [".jsx"] }], //allowed jsx files extensions

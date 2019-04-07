@@ -11,4 +11,7 @@ Error.getInitialProps = async ({ res, err }) => {
 Error.propTypes = {
     statusCode: PropTypes.any
 };
+Error.defaultProps = {
+    statusCode: null
+};
 export default Error;
