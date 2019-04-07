@@ -5,10 +5,7 @@ import logo from 'static/logo.svg';
 import RootLayout from './RootLayout';
 import './MainLayout.scss';
 
-interface IMainLayoutProps {
-    children: any;
-}
-const MainLayout: React.FC<IMainLayoutProps> = ({ children }: IMainLayoutProps) => (
+const MainLayout = ({ children }) => (
     <RootLayout>
         <div className='main-layout'>
             <nav>
@@ -35,6 +32,6 @@ const MainLayout: React.FC<IMainLayoutProps> = ({ children }: IMainLayoutProps) 
     </RootLayout>
 );
 MainLayout.propTypes = {
-    children: PropTypes.any,
+    children: PropTypes.any.isRequired,
 };
 export default MainLayout;

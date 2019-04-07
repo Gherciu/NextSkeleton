@@ -3,22 +3,18 @@ import ReduxCounter from 'components/ReduxCounter/';
 import MainLayout from 'components/Layouts/MainLayout';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { NextFunctionComponent } from 'next';
 
-interface IAppProps {
-    text: string;
-}
-const App: NextFunctionComponent<IAppProps> = ({ text }: IAppProps) => (
+const About = ({ text }) => (
     <MainLayout>
-        <h1>Main Page</h1>
+        <h1>About page</h1>
         <h2>{text}</h2>
         <HooksCounter />
         <br />
         <ReduxCounter />
     </MainLayout>
 );
-App.getInitialProps = async () => ({ text: 'Home page description' });
-App.propTypes = {
+About.getInitialProps = async () => ({ text: 'About page description' });
+About.propTypes = {
     text: PropTypes.string.isRequired,
 };
-export default App;
+export default About;

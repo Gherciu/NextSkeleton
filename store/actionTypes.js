@@ -1,5 +1,5 @@
 const actionTypes = {
     INCREMENT: 'INCREMENT',
-    DECREMENT: 'DECREMENT',
+    DECREMENT: 'DECREMENT'
 };
 export default actionTypes;

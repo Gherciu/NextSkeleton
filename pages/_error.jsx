@@ -1,14 +1,14 @@
 import React from 'react';
-import { NextFunctionComponent } from 'next';
+import PropTypes from 'prop-types';
 
-interface IErrorProps {
-    statusCode: any;
-}
-const Error: NextFunctionComponent<IErrorProps> = ({ statusCode }: IErrorProps) => (
+const Error = ({ statusCode }) => (
     <p>{statusCode ? `An error ${statusCode} occurred on server` : 'An error occurred on client'}</p>
 );
-Error.getInitialProps = async ({ res, err }: any) => {
+Error.getInitialProps = async ({ res, err }) => {
     const statusCode = res ? res.statusCode : err ? err.statusCode : null;
     return { statusCode };
+};
+Error.propTypes = {
+    statusCode: PropTypes.any
 };
 export default Error;

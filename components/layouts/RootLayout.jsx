@@ -4,10 +4,7 @@ import React from 'react';
 import './RootLayout.scss';
 import favicon from 'static/favicon.ico';
 
-interface IRootLayoutProps {
-    children: any;
-}
-const RootLayout: React.FC<IRootLayoutProps> = ({ children }: IRootLayoutProps) => (
+const RootLayout = ({ children }) => (
     <div className='root-layout'>
         <Head>
             <title>nextjs+typescript</title>
@@ -17,6 +14,6 @@ const RootLayout: React.FC<IRootLayoutProps> = ({ children }: IRootLayoutProps) 
     </div>
 );
 RootLayout.propTypes = {
-    children: PropTypes.any,
+    children: PropTypes.any.isRequired,
 };
 export default RootLayout;

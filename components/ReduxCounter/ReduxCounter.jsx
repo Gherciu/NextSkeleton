@@ -2,11 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
 
-interface IReduxCounter {
-    count: number;
-    dispatch: any;
-}
-const ReduxCounter: React.FC<IReduxCounter> = ({ count, dispatch }: IReduxCounter) => {
+const ReduxCounter = ({ count, dispatch }) => {
     const onCounterClick = () => {
         dispatch({ type: 'INCREMENT' });
     };
@@ -25,5 +21,6 @@ const ReduxCounter: React.FC<IReduxCounter> = ({ count, dispatch }: IReduxCounte
 };
 ReduxCounter.propTypes = {
     count: PropTypes.number.isRequired,
+    dispatch: PropTypes.func.isRequired
 };
-export default connect((state: { count: any }) => ({ count: state.count }))(ReduxCounter);
+export default connect(state => ({ count: state.count }))(ReduxCounter);

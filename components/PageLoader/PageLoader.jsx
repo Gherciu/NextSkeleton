@@ -4,10 +4,7 @@ import Router from 'next/router';
 import NProgress from 'nprogress';
 import './PageLoader.scss';
 
-interface IPageLoaderProps {
-    children: any;
-}
-const PageLoader: React.FC<IPageLoaderProps> = ({ children }: IPageLoaderProps) => {
+const PageLoader = ({ children }) => {
     useEffect(() => {
         Router.events.on('routeChangeStart', () => {
             NProgress.start();
@@ -18,6 +15,6 @@ const PageLoader: React.FC<IPageLoaderProps> = ({ children }: IPageLoaderProps) 
     return (<div className='page-loader'>{ children }</div>);
 };
 PageLoader.propTypes = {
-    children: PropTypes.any
+    children: PropTypes.any.isRequired
 };
 export default PageLoader;

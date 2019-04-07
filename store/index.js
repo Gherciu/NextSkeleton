@@ -5,7 +5,7 @@ import reducer from 'store/reducers';
 import state from 'store/state';
 
 const isServer = typeof window === 'undefined';
-const initializeStore = (initialState: any) => (
+const initializeStore = initialState => (
     createStore(reducer, initialState, composeWithDevTools(applyMiddleware(thunkMiddleware)))
 );
 
@@ -13,10 +13,10 @@ const getOrCreateStore = () => {
     if (isServer) {
         return initializeStore(state);
     }
-    if (!(window as any).__REDUX_STORE__) {
-        (window as any).__REDUX_STORE__ = initializeStore(state);
+    if (!window.__REDUX_STORE__) {
+        window.__REDUX_STORE__ = initializeStore(state);
     }
-    return (window as any).__REDUX_STORE__;
+    return window.__REDUX_STORE__;
 };
 const store = getOrCreateStore();
 export default store;

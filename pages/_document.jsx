@@ -3,7 +3,7 @@ import React from 'react';
 import state from 'store/state';
 
 class MyDocument extends Document {
-    static async getInitialProps(ctx: any) {
+    static async getInitialProps(ctx) {
         const initialProps = await Document.getInitialProps(ctx);
         return { ...initialProps };
     }

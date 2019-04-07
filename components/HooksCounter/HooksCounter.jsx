@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 
 const HooksCounter = () => {
-    const [count, setCount] = useState<number>(0);
+    const [count, setCount] = useState(0);
     const onCounterClick = useCallback(() => {
         setCount(count + 1);
     }, [count]);
