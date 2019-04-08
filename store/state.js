@@ -1,4 +1,5 @@
-const isServer = typeof window === 'undefined';
+import isServer from 'lib/isServer';
+
 const defaultState = {
     count: 0,
 };

@@ -3,8 +3,8 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import thunkMiddleware from 'redux-thunk';
 import reducer from 'store/reducers';
 import state from 'store/state';
+import isServer from 'lib/isServer';
 
-const isServer = typeof window === 'undefined';
 const initializeStore = initialState => (
     createStore(reducer, initialState, composeWithDevTools(applyMiddleware(thunkMiddleware)))
 );

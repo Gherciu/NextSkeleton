@@ -11,6 +11,7 @@ module.exports = withSASS(
         webpack: config => {
             config.resolve.alias.components = path.join(__dirname, 'components');
             config.resolve.alias.store = path.join(__dirname, 'store');
+            config.resolve.alias.lib = path.join(__dirname, 'lib');
             config.resolve.alias.static = path.join(__dirname, 'static');
 
             config.plugins = config.plugins || [];
