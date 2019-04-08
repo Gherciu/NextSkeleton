@@ -6,13 +6,13 @@
     "scripts": {
         "lint:scripts": "./node_modules/.bin/eslint ./",
         "fix:scripts": "./node_modules/.bin/eslint ./ --fix",
-        "lint:all": "./node_modules/.bin/concurrently \"npm:lint:scripts\" \"npm:lint:styles\"",
-        "fix:all": "./node_modules/.bin/concurrently \"npm:fix:scripts\" \"npm:fix:styles\"",
         "lint:styles": "./node_modules/.bin/stylelint \"./components/**/*.scss\" --syntax scss",
         "fix:styles": "./node_modules/.bin/stylelint \"./components/**/*.scss\" --fix",
+        "lint:all": "./node_modules/.bin/concurrently \"npm:lint:scripts\" \"npm:lint:styles\"",
+        "fix:all": "./node_modules/.bin/concurrently \"npm:fix:scripts\" \"npm:fix:styles\"",
         "prebuild": "./node_modules/.bin/concurrently \"npm:lint:all\" \"rm -rf ./.next/\"",
         "build": "./node_modules/.bin/next build",
-        "start:dev": "node ./server/index.js",
+        "start:dev": "./node_modules/.bin/nodemon ./server/index.js",
         "start:prod": "./node_modules/.bin/pm2 start ./ecosystem.json",
         "stop:prod": "./node_modules/.bin/pm2 stop ./ecosystem.json",
         "clean:install": "rm -rf ./node_modules && rm -rf package-lock.json && npm i"
@@ -49,6 +49,7 @@
         "eslint-plugin-jsx-a11y": "^6.2.1",
         "eslint-plugin-react": "^7.12.4",
         "node-sass": "^4.11.0",
+        "nodemon": "^1.18.10",
         "stylelint": "^9.10.1",
         "stylelint-config-recommended": "^2.1.0"
     }
