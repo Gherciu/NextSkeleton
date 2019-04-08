@@ -6,10 +6,11 @@
     "scripts": {
         "lint:scripts": "./node_modules/.bin/eslint ./",
         "fix:scripts": "./node_modules/.bin/eslint ./ --fix",
-        "lint:all": "npm run lint:scripts && npm run lint:styles",
-        "fix:all": "npm run fix:scripts && npm run fix:styles",
+        "lint:all": "./node_modules/.bin/concurrently \"npm:lint:scripts\" \"npm:lint:styles\"",
+        "fix:all": "./node_modules/.bin/concurrently \"npm:fix:scripts\" \"npm:fix:styles\"",
         "lint:styles": "./node_modules/.bin/stylelint \"./components/**/*.scss\" --syntax scss",
         "fix:styles": "./node_modules/.bin/stylelint \"./components/**/*.scss\" --fix",
+        "prebuild": "./node_modules/.bin/concurrently \"npm:lint:all\" \"rm -rf ./.next/\"",
         "build": "./node_modules/.bin/next build",
         "start:dev": "node ./server/index.js",
         "start:prod": "./node_modules/.bin/pm2 start ./ecosystem.json",
@@ -41,6 +42,7 @@
         "pm2": "^3.4.1"
     },
     "devDependencies": {
+        "concurrently": "^4.1.0",
         "eslint": "^5.16.0",
         "eslint-config-airbnb": "^17.1.0",
         "eslint-plugin-import": "^2.16.0",
