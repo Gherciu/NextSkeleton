@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
+import { INCREMENT } from 'store/actions';
 
 const ReduxCounter = ({ count, dispatch }) => {
     const onCounterClick = () => {
-        dispatch({ type: 'INCREMENT' });
+        dispatch(INCREMENT);
     };
     return (
         <div onClick={onCounterClick} className='redux-counter'>
