@@ -15,7 +15,7 @@
         "start:dev": "node ./server/index.js",
         "start:prod": "./node_modules/.bin/pm2 start ./ecosystem.json",
         "stop:prod": "./node_modules/.bin/pm2 stop ./ecosystem.json",
-        "install:clean": "rm -rf ./node_modules && rm -rf package-lock.json && npm i"
+        "clean:install": "rm -rf ./node_modules && rm -rf package-lock.json && npm i"
     },
     "keywords": [
         "nextjs",
