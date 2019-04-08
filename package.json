@@ -10,7 +10,6 @@
 		"fix:styles": "./node_modules/.bin/stylelint \"./components/**/*.scss\" --fix",
 		"lint:all": "./node_modules/.bin/concurrently \"npm:lint:scripts\" \"npm:lint:styles\"",
 		"fix:all": "./node_modules/.bin/concurrently \"npm:fix:scripts\" \"npm:fix:styles\"",
-		"prebuild": "./node_modules/.bin/concurrently \"npm:lint:all\" \"rm -rf ./.next/\"",
 		"build": "./node_modules/.bin/next build",
 		"start:dev": "./node_modules/.bin/nodemon ./server/index.js",
 		"start:prod": "./node_modules/.bin/pm2 start ./ecosystem.json",
