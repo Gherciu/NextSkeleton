@@ -8,7 +8,6 @@ import isServer from 'lib/isServer';
 const initializeStore = initialState => (
     createStore(reducer, initialState, composeWithDevTools(applyMiddleware(thunkMiddleware)))
 );
-
 const getOrCreateStore = () => {
     if (isServer) {
         return initializeStore(state);

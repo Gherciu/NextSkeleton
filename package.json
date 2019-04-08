@@ -1,72 +1,72 @@
 {
-	"name": "nextjs-skeleton",
-	"version": "1.0.0",
-	"description": "A  skeleton for nextjs apps",
-	"main": "./server/index.js",
-	"scripts": {
-		"lint:scripts": "./node_modules/.bin/eslint ./",
-		"fix:scripts": "./node_modules/.bin/eslint ./ --fix",
-		"lint:styles": "./node_modules/.bin/stylelint \"./components/**/*.scss\" --syntax scss",
-		"fix:styles": "./node_modules/.bin/stylelint \"./components/**/*.scss\" --fix",
-		"build": "./node_modules/.bin/next build",
-		"start:dev": "./node_modules/.bin/nodemon ./server/index.js",
-		"start:prod": "./node_modules/.bin/pm2 start ./ecosystem.json",
-		"stop:prod": "./node_modules/.bin/pm2 stop ./ecosystem.json",
-		"clean:install": "rm -rf ./node_modules && rm -rf package-lock.json && npm i"
-	},
-	"keywords": [
-		"nextjs",
-		"nextjs-skeleton"
-	],
-	"author": "Gherciu Gheorghe",
-	"license": "ISC",
-	"dependencies": {
-		"@zeit/next-sass": "^1.0.1",
-		"dotenv": "^7.0.0",
-		"dotenv-webpack": "^1.7.0",
-		"express": "^4.16.4",
-		"next": "^8.0.4",
-		"next-images": "^1.1.1",
-		"normalize.css": "^8.0.1",
-		"nprogress": "^0.2.0",
-		"prop-types": "^15.7.2",
-		"react": "^16.8.6",
-		"react-dom": "^16.8.6",
-		"react-redux": "^6.0.1",
-		"redux": "^4.0.1",
-		"redux-devtools-extension": "^2.13.8",
-		"redux-thunk": "^2.3.0",
-		"pm2": "^3.4.1"
-	},
-	"devDependencies": {
-		"eslint": "^5.16.0",
-		"eslint-config-airbnb": "^17.1.0",
-		"eslint-plugin-import": "^2.16.0",
-		"eslint-plugin-jsx-a11y": "^6.2.1",
-		"eslint-plugin-react": "^7.12.4",
-		"husky": "^1.3.1",
-		"lint-staged": "^8.1.5",
-		"node-sass": "^4.11.0",
-		"nodemon": "^1.18.10",
-		"stylelint": "^9.10.1",
-		"stylelint-config-recommended": "^2.1.0"
-	},
-	"lint-staged": {
-		"linters": {
-			"*.(js|jsx)": [
-				"npm run lint:scripts",
-				"git add"
-			],
-			"*.(css|scss)": [
-				"npm run lint:styles",
-				"git add"
-			]
-		},
-		"concurrent": true
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
-	}
+    "name": "nextjs-skeleton",
+    "version": "1.0.0",
+    "description": "A  skeleton for nextjs apps",
+    "main": "./server/index.js",
+    "scripts": {
+        "lint:scripts": "./node_modules/.bin/eslint ./",
+        "fix:scripts": "./node_modules/.bin/eslint ./ --fix",
+        "lint:styles": "./node_modules/.bin/stylelint \"./components/**/*.scss\" --syntax scss",
+        "fix:styles": "./node_modules/.bin/stylelint \"./components/**/*.scss\" --fix",
+        "build": "./node_modules/.bin/next build",
+        "start:dev": "./node_modules/.bin/nodemon ./server/index.js",
+        "start:prod": "./node_modules/.bin/pm2 start ./ecosystem.json",
+        "stop:prod": "./node_modules/.bin/pm2 stop ./ecosystem.json",
+        "clean:install": "rm -rf ./node_modules && rm -rf package-lock.json && npm i"
+    },
+    "keywords": [
+        "nextjs",
+        "nextjs-skeleton"
+    ],
+    "author": "Gherciu Gheorghe",
+    "license": "ISC",
+    "dependencies": {
+        "@zeit/next-sass": "^1.0.1",
+        "dotenv": "^7.0.0",
+        "dotenv-webpack": "^1.7.0",
+        "express": "^4.16.4",
+        "next": "^8.0.4",
+        "next-images": "^1.1.1",
+        "normalize.css": "^8.0.1",
+        "nprogress": "^0.2.0",
+        "prop-types": "^15.7.2",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "react-redux": "^6.0.1",
+        "redux": "^4.0.1",
+        "redux-devtools-extension": "^2.13.8",
+        "redux-thunk": "^2.3.0",
+        "pm2": "^3.4.1"
+    },
+    "devDependencies": {
+        "eslint": "^5.16.0",
+        "eslint-config-airbnb": "^17.1.0",
+        "eslint-plugin-import": "^2.16.0",
+        "eslint-plugin-jsx-a11y": "^6.2.1",
+        "eslint-plugin-react": "^7.12.4",
+        "husky": "^1.3.1",
+        "lint-staged": "^8.1.5",
+        "node-sass": "^4.11.0",
+        "nodemon": "^1.18.10",
+        "stylelint": "^9.10.1",
+        "stylelint-config-recommended": "^2.1.0"
+    },
+    "lint-staged": {
+        "linters": {
+            "*.(js|jsx)": [
+                "npm run lint:scripts",
+                "git add"
+            ],
+            "*.(css|scss)": [
+                "npm run lint:styles",
+                "git add"
+            ]
+        },
+        "concurrent": true
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    }
 }
