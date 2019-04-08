@@ -11,7 +11,7 @@ const HooksCounter = () => {
             <style jsx>
                 {`
                     .hooks-counter{
-                        cursor: pointer;
+                        color: rgb(${count * 25},0,0);
                     }
                 `}
             </style>

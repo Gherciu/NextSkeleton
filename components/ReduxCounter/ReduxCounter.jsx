@@ -13,7 +13,7 @@ const ReduxCounter = ({ count, dispatch }) => {
             <style jsx>
                 {`
                     .redux-counter{
-                        cursor: pointer;
+                        color: rgb(${count * 25},0,0);
                     }
                 `}
             </style>
