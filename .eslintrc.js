@@ -1,5 +1,5 @@
 module.exports = {
-  env: {  
+  env: {
     browser: true,
     es6: true
   },
@@ -33,7 +33,7 @@ module.exports = {
     "import/no-unresolved":false, //not work corect with alliases
     "no-underscore-dangle": 0, //This rule disallows dangling underscores in identifiers.
     "no-nested-ternary":0,//to use nested ternary operator
-    "comma-dangle":0,//comma on end of array,objects items
+    "comma-dangle":["error", "always-multiline"],//comma on end of array,objects items (neded for git diff;)))
     "jsx-a11y/no-static-element-interactions":0,
     "jsx-a11y/click-events-have-key-events":0,
     "arrow-parens": ["error", "as-needed"], //use parantese for arrow functions as-neded
