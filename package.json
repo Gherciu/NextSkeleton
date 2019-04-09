@@ -4,8 +4,8 @@
     "description": "A  skeleton for nextjs apps",
     "main": "./server/index.js",
     "scripts": {
-        "lint:scripts": "./node_modules/.bin/eslint ./",
-        "fix:scripts": "./node_modules/.bin/eslint ./ --fix",
+        "lint:scripts": "./node_modules/.bin/eslint ./ --max-warnings=0",
+        "fix:scripts": "./node_modules/.bin/eslint ./ --fix --max-warnings=0",
         "lint:styles": "./node_modules/.bin/stylelint \"./components/**/*.scss\" --syntax scss",
         "fix:styles": "./node_modules/.bin/stylelint \"./components/**/*.scss\" --fix",
         "build": "./node_modules/.bin/next build",
