@@ -4,7 +4,7 @@ import MainLayout from 'components/Layouts/MainLayout';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const App = ({ text }) => (
+const Index = ({ text }) => (
     <MainLayout>
         <h1>Main Page</h1>
         <h2>{text}</h2>
@@ -13,8 +13,8 @@ const App = ({ text }) => (
         <ReduxCounter />
     </MainLayout>
 );
-App.getInitialProps = async () => ({ text: 'Home page description' });
-App.propTypes = {
+Index.getInitialProps = async () => ({ text: 'Home page description', namespacesRequired: [] });
+Index.propTypes = {
     text: PropTypes.string.isRequired,
 };
-export default App;
+export default Index;

@@ -13,7 +13,7 @@ const About = ({ text }) => (
         <ReduxCounter />
     </MainLayout>
 );
-About.getInitialProps = async () => ({ text: 'About page description' });
+About.getInitialProps = async () => ({ text: 'About page description', namespacesRequired: [] });
 About.propTypes = {
     text: PropTypes.string.isRequired,
 };

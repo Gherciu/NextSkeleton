@@ -7,7 +7,7 @@ import favicon from 'static/favicon.ico';
 const RootLayout = ({ children }) => (
     <div className='root-layout'>
         <Head>
-            <title>nextjs+typescript</title>
+            <title>{process.env.APP_NAME}</title>
             <link rel='shortcut icon' href={favicon} type='image/x-icon' />
         </Head>
         {children}

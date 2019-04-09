@@ -3,15 +3,10 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import store from 'store/index';
 import PageLoader from 'components/PageLoader';
+import { appWithTranslation } from 'lib/i18n';
 import 'resources/scss/_global.scss';
 
 class MyApp extends App {
-    static async getInitialProps({ Component, ctx }) {
-        return {
-            pageProps: Component.getInitialProps ? await Component.getInitialProps(ctx) : {},
-        };
-    }
-
     render() {
         const { Component, pageProps, router } = this.props;
         return (
@@ -26,4 +21,4 @@ class MyApp extends App {
     }
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);
