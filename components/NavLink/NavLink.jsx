@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'lib/i18n';
 import PropTypes from 'prop-types';
 import React from 'react';
 import './NavLink.scss';
@@ -11,9 +11,9 @@ const NavLink = ({ children, href, className }) => (
 NavLink.propTypes = {
     children: PropTypes.any.isRequired,
     className: PropTypes.string,
-    href: PropTypes.string.isRequired
+    href: PropTypes.string.isRequired,
 };
 NavLink.defaultProps = {
-    className: ''
+    className: '',
 };
 export default NavLink;

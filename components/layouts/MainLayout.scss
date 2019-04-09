@@ -8,21 +8,4 @@
     @include mobile {
         background: #000;
     }
-    nav {
-        padding: 20px;
-        ul {
-            display: flex;
-            align-items: center;
-            li {
-                margin-left: 20px;
-                list-style: none;
-                a {
-                    height: 100%;
-                    .logo {
-                        max-width: 50px;
-                    }
-                }
-            }
-        }
-    }
 }
