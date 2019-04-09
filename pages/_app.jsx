@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import store from 'store/index';
 import PageLoader from 'components/PageLoader';
 import { appWithTranslation } from 'lib/i18n';
-import 'resources/scss/_global.scss';
+import 'components/_global.scss';
 
 class MyApp extends App {
     render() {
