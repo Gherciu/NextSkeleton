@@ -26,6 +26,7 @@ module.exports = {
     "react/jsx-indent":["error", 4],//jsx tab width
     "react/forbid-prop-types":0, //to use prop-types (any,object,array)
     "react/no-danger":0, //to use dangerouslySetInnerHtml
+    "react/jsx-indent-props": [2, 'first'], //This option validates a specific indentation style for props.
     "react/jsx-one-expression-per-line":0,//to use <div> count: {count} </div> inline
     "react/jsx-filename-extension": [1, { "extensions": [".jsx"] }], //allowed jsx files extensions
     "jsx-a11y/anchor-is-valid":0, //to use <a>link</a> without href
