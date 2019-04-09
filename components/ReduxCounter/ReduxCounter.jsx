@@ -22,6 +22,6 @@ const ReduxCounter = ({ count, dispatch }) => {
 };
 ReduxCounter.propTypes = {
     count: PropTypes.number.isRequired,
-    dispatch: PropTypes.func.isRequired
+    dispatch: PropTypes.func.isRequired,
 };
 export default connect(state => ({ count: state.count }))(ReduxCounter);

@@ -15,6 +15,6 @@ const PageLoader = ({ children }) => {
     return (<div className='page-loader'>{ children }</div>);
 };
 PageLoader.propTypes = {
-    children: PropTypes.any.isRequired
+    children: PropTypes.any.isRequired,
 };
 export default PageLoader;
