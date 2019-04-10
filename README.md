@@ -9,7 +9,7 @@ This is a skeleton application using next.js. This application is meant to be us
 - Start dev server: `yarn start:dev` or `yarn run start:dev`
 
 ### Features
-- i18n internationalization support ( Scalable apps need to support multiple languages, easily add and support multiple languages with `next-i18next`).
+- `i18n` internationalization support ( Scalable apps need to support multiple languages, easily add and support multiple languages with `next-i18next`).
 - Includes:
   - `Normalize.css` for CSS normalizations and common bug fixes
   - `redux`, `react-redux`, `redux-thunk` and `redux-devtools-extension` to manage app state
