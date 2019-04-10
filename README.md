@@ -8,6 +8,9 @@ This is a skeleton application using next.js. This application is meant to be us
 - Rename `.env.example` file to `.env`
 - Start dev server: `yarn start:dev` or `yarn run start:dev`
 
+### Features
+- i18n internationalization support ( Scalable apps need to support multiple languages, easily add and support multiple languages with `next-i18next`).
+
 ### When ready to build for production
 - Set `NODE_ENV = production` in `.env` file
 - Build the project: `yarn build` or `yarn run build`
