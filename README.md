@@ -9,6 +9,7 @@ This is a skeleton application using next.js. This application is meant to be us
 - Start dev server: `yarn start:dev` or `yarn run start:dev`
 
 ### Features
+- `ESLint` and `Stylelint` to enforce code style. Run `yarn lint:scripts` for `.js|.jsx` and `yarn lint:styles` for `*.scss` files.
 - `i18n` internationalization support ( Scalable apps need to support multiple languages, easily add and support multiple languages with `next-i18next`).
 - Useful SCSS helpers `_mixins` and `_vars`
 - Includes:
