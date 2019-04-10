@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Navbar from 'components/Navbar';
-import RootLayout from './RootLayout';
+import RootLayout from 'components/layouts/RootLayout';
 import './MainLayout.scss';
 
 const MainLayout = ({ children }) => (

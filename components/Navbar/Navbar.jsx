@@ -1,4 +1,4 @@
-import NavLink from 'components/NavLink';
+import NavLink from 'components/common/NavLink';
 import PropTypes from 'prop-types';
 import React from 'react';
 import logo from 'static/logo.svg';
