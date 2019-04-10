@@ -13,6 +13,7 @@ This is a skeleton application using next.js. This application is meant to be us
 - Includes:
   - `Normalize.css` for CSS normalizations and common bug fixes
   - `redux`, `react-redux`, `redux-thunk` and `redux-devtools-extension` to manage app state
+  - `NProgress` page loading progress bar
 
 ### When ready to build for production
 - Set `NODE_ENV = production` in `.env` file
