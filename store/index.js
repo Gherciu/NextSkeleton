@@ -1,19 +1,22 @@
 import { applyMiddleware, createStore } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
+import { composeWithDevTools } from 'redux-devtools-extension/logOnlyInProduction';
 import thunkMiddleware from 'redux-thunk';
 import reducer from 'store/reducers';
-import state from 'store/state';
+import initialState from 'store/initialState';
 import isServer from 'lib/isServer';
 
-const initializeStore = initialState => (
-    createStore(reducer, initialState, composeWithDevTools(applyMiddleware(thunkMiddleware)))
+const composeEnhancers = composeWithDevTools({
+    // options like actionSanitizer, stateSanitizer
+});
+const initializeStore = state => (
+    createStore(reducer, state, composeEnhancers(applyMiddleware(thunkMiddleware)))
 );
 const getOrCreateStore = () => {
     if (isServer) {
-        return initializeStore(state);
+        return initializeStore(initialState);
     }
     if (!window.__REDUX_STORE__) {
-        window.__REDUX_STORE__ = initializeStore(state);
+        window.__REDUX_STORE__ = initializeStore(initialState);
     }
     return window.__REDUX_STORE__;
 };

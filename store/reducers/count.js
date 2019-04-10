@@ -1,7 +1,7 @@
 import actionTypes from 'store/actionTypes';
-import state from 'store/state';
+import initialState from 'store/initialState';
 
-export default (count = state.count, action) => {
+export default (count = initialState.count, action) => {
     switch (action.type) {
         case actionTypes.INCREMENT: {
             return count + 1;
