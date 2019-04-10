@@ -17,7 +17,7 @@ This is a skeleton application using next.js. This application is meant to be us
   - `Normalize.css` for CSS normalizations and common bug fixes
   - `redux`, `react-redux`, `redux-thunk` and `redux-devtools-extension` to manage app state
   - `NProgress` page loading progress bar
-  - `dotenv` to read '.env' files in back-end and `dotenv-webpack` to read '.env' files in front-end
+  - `dotenv` to read `.env` files in back-end and `dotenv-webpack` to read `.env` files in front-end
 
 ### When ready to build for production
 - Set `NODE_ENV = production` in `.env` file
