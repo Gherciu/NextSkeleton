@@ -1,7 +1,7 @@
 {
-    "h1": "Un exemplu simplu",
-    "change-locale": "Schimba limba",
-    "to-second-page": "Catre pagina urmatoare",
-    "error-with-status": "O erroare cu status  {{statusCode}} a aparut pe partea de server",
-    "error-without-status": "O erroeare a aparut pe partea de server"
+    "common-h1": "Un exemplu simplu",
+    "common-change-locale": "Schimba limba",
+    "common-to-second-page": "Catre pagina urmatoare",
+    "common-error-with-status": "O erroare cu status  {{statusCode}} a aparut pe partea de server",
+    "common-error-without-status": "O erroeare a aparut pe partea de server"
 }

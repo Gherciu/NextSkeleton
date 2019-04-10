@@ -7,7 +7,7 @@ import { withNamespaces } from 'lib/i18n';
 
 const Index = ({ text, t }) => (
     <MainLayout>
-        <h1>{t('h1')}</h1>
+        <h1>{t('common-h1')}</h1>
         <h2>{text}</h2>
         <HooksCounter />
         <br />

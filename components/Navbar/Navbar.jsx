@@ -30,7 +30,7 @@ const Navbar = ({ t }) => (
             </li>
             <li>
                 <button type='button' onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'ro' : 'en')}>
-                    {t('change-locale')}
+                    {t('navbar-change-locale')}
                 </button>
             </li>
         </ul>

@@ -4,8 +4,8 @@ import { withNamespaces } from 'lib/i18n';
 
 const Error = ({ statusCode, t }) => (
     <p>{statusCode
-        ? t('error-with-status', { statusCode })
-        : t('error-without-status')}
+        ? t('common-error-with-status', { statusCode })
+        : t('common-error-without-status')}
     </p>
 );
 Error.getInitialProps = async ({ res, err }) => {
