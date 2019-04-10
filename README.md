@@ -11,6 +11,7 @@ This is a skeleton application using next.js. This application is meant to be us
 ### Features
 - `ESLint` and `Stylelint` to enforce code style. Run `yarn lint:scripts` for `.js|.jsx` and `yarn lint:styles` for `*.scss` files.
 - `i18n` internationalization support ( Scalable apps need to support multiple languages, easily add and support multiple languages with `next-i18next`).
+- Pre-commit hooks with `husky` and `lint-staged`
 - Useful SCSS helpers `_mixins` and `_vars`
 - Includes:
   - `Normalize.css` for CSS normalizations and common bug fixes
