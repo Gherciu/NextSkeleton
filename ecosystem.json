@@ -1,7 +1,7 @@
 {
     "apps": [
         {
-            "name": "nextjs-skeleton",
+            "name": "NextSkeleton",
             "script": "./server/index.js",
             "watch": false
         }

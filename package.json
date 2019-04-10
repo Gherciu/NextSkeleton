@@ -1,5 +1,5 @@
 {
-    "name": "nextjs-skeleton",
+    "name": "next-skeleton",
     "version": "1.0.0",
     "description": "A  skeleton for nextjs apps",
     "main": "./server/index.js",
