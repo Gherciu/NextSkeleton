@@ -3,8 +3,8 @@ const path = require('path');
 const withSASS = require('@zeit/next-sass');
 const withImages = require('next-images');
 const Dotenv = require('dotenv-webpack');
+const isProd = require('./lib/isProd');
 
-const isProd = process.env.NODE_ENV === 'production';
 module.exports = withSASS(
     withImages({
         assetPrefix: isProd ? process.env.ASSET_PREFIX : '',

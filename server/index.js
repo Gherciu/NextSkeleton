@@ -3,10 +3,10 @@ const express = require('express');
 const next = require('next');
 const nextI18NextMiddleware = require('next-i18next/middleware');
 const nextI18next = require('./../lib/i18n');
+const isProd = require('./../lib/isProd');
 
-const dev = process.env.NODE_ENV !== 'production';
 const port = process.env.PORT;
-const app = next({ dev });
+const app = next({ dev: !isProd });
 const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
