@@ -3,6 +3,7 @@ import ReduxCounter from 'components/ReduxCounter';
 import MainLayout from 'components/Layouts/MainLayout';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { INCREMENT } from 'store/actions';
 import { withNamespaces } from 'lib/i18n';
 
 const About = ({ text, t }) => (
@@ -14,7 +15,10 @@ const About = ({ text, t }) => (
         <ReduxCounter />
     </MainLayout>
 );
-About.getInitialProps = async () => ({ text: 'About page description', namespacesRequired: ['common', 'navbar'] });
+About.getInitialProps = async ({ store, isServer }) => {
+    if (isServer) { store.dispatch(INCREMENT); }
+    return { text: 'Home page description', namespacesRequired: ['common', 'navbar'] };
+};
 About.propTypes = {
     text: PropTypes.string.isRequired,
     t: PropTypes.func.isRequired,

@@ -4,6 +4,7 @@ import MainLayout from 'components/Layouts/MainLayout';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { withNamespaces } from 'lib/i18n';
+import { INCREMENT } from 'store/actions';
 
 const Index = ({ text, t }) => (
     <MainLayout>
@@ -14,7 +15,10 @@ const Index = ({ text, t }) => (
         <ReduxCounter />
     </MainLayout>
 );
-Index.getInitialProps = async () => ({ text: 'Home page description', namespacesRequired: ['common', 'navbar'] });
+Index.getInitialProps = async ({ store, isServer }) => {
+    if (isServer) { store.dispatch(INCREMENT); }
+    return { text: 'Home page description', namespacesRequired: ['common', 'navbar'] };
+};
 Index.propTypes = {
     text: PropTypes.string.isRequired,
     t: PropTypes.func.isRequired,
