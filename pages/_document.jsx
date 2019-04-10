@@ -1,6 +1,5 @@
 import Document, { Head, Main, NextScript } from 'next/document';
 import React from 'react';
-import state from 'store/state';
 
 class MyDocument extends Document {
     static async getInitialProps(ctx) {
@@ -11,9 +10,7 @@ class MyDocument extends Document {
     render() {
         return (
             <html lang='en'>
-                <Head>
-                    <script dangerouslySetInnerHTML={{ __html: `window.localStorage.setItem('__REDUX_STATE__', '${JSON.stringify(state)}')` }} />
-                </Head>
+                <Head />
                 <body>
                     <Main />
                     <NextScript />
