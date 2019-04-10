@@ -12,3 +12,7 @@ This is a skeleton application using next.js. This application is meant to be us
 - Set `NODE_ENV = production` in `.env` file
 - Build the project: `yarn build` or `yarn run build`
 - Start production server: `yarn start:prod` or `yarn run start:prod`
+
+----
+
+#### If you like this repository star⭐ and watch👀 on [GitHub](https://github.com/Gherciu/NextSkeleton)
