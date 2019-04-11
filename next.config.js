@@ -10,6 +10,7 @@ module.exports = withPlugins([
     [withSASS],
     [withOptimizedImages, {
         optimizeImages: isProd,
+        handleImages: ['jpeg', 'png', 'webp', 'gif'],
     }],
 ],
 {
@@ -28,6 +29,26 @@ module.exports = withPlugins([
                 systemvars: true,
             }),
         ];
+        config.module.rules.push({
+            test: /.svg$/,
+            use: [{
+                loader: '@svgr/webpack',
+                options: {
+                    svgoConfig: {
+                        pretty: true,
+                        multipass: true,
+                        plugins: [
+                            { removeViewBox: false },
+                            { convertColors: { currentColor: true } },
+                            { removeAttrs: { attrs: '(fill|stroke|width|height)' } },
+                        ],
+                    },
+                },
+            },
+            {
+                loader: 'url-loader',
+            }],
+        });
         return config;
     },
 },);
