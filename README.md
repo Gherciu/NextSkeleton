@@ -13,6 +13,7 @@ This is a skeleton application using next.js. This application is meant to be us
 - `i18n` internationalization support ( Scalable apps need to support multiple languages, easily add and support multiple languages with `next-i18next`).
 - Pre-commit hooks with `husky` and `lint-staged`
 - Useful SCSS helpers `_mixins` and `_vars`
+- Automated images optimization
 - Includes:
   - `Normalize.css` for CSS normalizations and common bug fixes
   - `redux`, `react-redux`, `redux-thunk` and `redux-devtools-extension` to manage app state
