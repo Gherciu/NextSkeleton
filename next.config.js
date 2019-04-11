@@ -2,8 +2,8 @@ require('dotenv').config();
 const path = require('path');
 const withPlugins = require('next-compose-plugins');
 const withSASS = require('@zeit/next-sass');
-const withOptimizedImages = require('next-optimized-images');
 const Dotenv = require('dotenv-webpack');
+const withOptimizedImages = require('next-optimized-images');
 const isProd = require('./lib/isProd');
 
 module.exports = withPlugins([
@@ -11,6 +11,9 @@ module.exports = withPlugins([
     [withOptimizedImages, {
         optimizeImages: isProd,
         handleImages: ['jpeg', 'png', 'webp', 'gif'],
+        imagesName: '[name]-[hash].[ext]',
+        inlineImageLimit: 8192,
+        optimizeImagesInDev: false,
     }],
 ],
 {
@@ -29,26 +32,43 @@ module.exports = withPlugins([
                 systemvars: true,
             }),
         ];
-        config.module.rules.push({
-            test: /.svg$/,
-            use: [{
-                loader: '@svgr/webpack',
+        config.module.rules.push(
+            {
+                test: /.(ico|jpg|mp4|mp3)$/,
+                loader: 'file-loader',
                 options: {
-                    svgoConfig: {
-                        pretty: true,
-                        multipass: true,
-                        plugins: [
-                            { removeViewBox: false },
-                            { convertColors: { currentColor: true } },
-                            { removeAttrs: { attrs: '(fill|stroke|width|height)' } },
-                        ],
-                    },
+                    name: '[name]-[hash].[ext]',
+                    publicPath: isProd ? `${process.env.ASSET_PREFIX}/_next/static` : '/_next/static',
+                    outputPath: 'static',
                 },
             },
             {
-                loader: 'url-loader',
-            }],
-        });
+                test: /.svg$/,
+                use: [{
+                    loader: '@svgr/webpack',
+                    options: {
+                        svgoConfig: {
+                            pretty: true,
+                            multipass: true,
+                            plugins: [
+                                { removeViewBox: false },
+                                { convertColors: { currentColor: true } },
+                                { removeAttrs: { attrs: '(fill|stroke|width|height)' } },
+                            ],
+                        },
+                    },
+                },
+                {
+                    loader: 'url-loader',
+                    options: {
+                        limit: 8192,
+                        name: '[name]-[hash].[ext]',
+                        publicPath: isProd ? `${process.env.ASSET_PREFIX}/_next/static` : '/_next/static',
+                        outputPath: 'static',
+                    },
+                }],
+            }
+        );
         return config;
     },
 },);

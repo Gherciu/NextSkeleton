@@ -1,14 +1,14 @@
 import Head from 'next/head';
 import PropTypes from 'prop-types';
 import React from 'react';
-import favicon from 'static/favicon.png';
+import faviconUrl from 'static/favicon.ico';
 import './RootLayout.scss';
 
 
 const RootLayout = ({ children }) => (
     <div className='root-layout'>
         <Head>
-            <link rel='icon' type='image/png' href={favicon} />
+            <link rel='shortcut icon' href={faviconUrl} type='image/x-icon' />
             <title>{process.env.APP_NAME}</title>
         </Head>
         {children}
