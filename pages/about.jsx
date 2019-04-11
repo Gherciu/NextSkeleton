@@ -17,7 +17,7 @@ const About = ({ text, t }) => (
 );
 About.getInitialProps = async ({ store, isServer }) => {
     if (isServer) { store.dispatch(INCREMENT); }
-    return { text: 'Home page description', namespacesRequired: ['common', 'navbar'] };
+    return { text: 'About page description', namespacesRequired: ['common', 'navbar'] };
 };
 About.propTypes = {
     text: PropTypes.string.isRequired,

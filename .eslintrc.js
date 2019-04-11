@@ -32,6 +32,7 @@ module.exports = {
     "jsx-a11y/anchor-is-valid":0, //to use <a>link</a> without href
     "jsx-quotes": ["error", "prefer-single"],//jsx quotes to single
     "import/no-unresolved":false, //not work corect with alliases
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["next.config.js"]}], // Forbid the import of external modules that are not declared in the package.json's dependencies
     "no-underscore-dangle": 0, //This rule disallows dangling underscores in identifiers.
     "no-nested-ternary":0,//to use nested ternary operator
     "comma-dangle":["error", "always-multiline"],//comma on end of array,objects items (neded for git diff;)))
