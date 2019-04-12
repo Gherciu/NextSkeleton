@@ -1,6 +1,7 @@
 {
-    "common-h1": "A simple example",
-    "common-to-second-page": "To second page",
-    "common-error-with-status": "A {{statusCode}} error occurred on server",
-    "common-error-without-status": "An error occurred on the server"
+	"common-change-locale": "Change locale",
+	"common-error-with-status": "A {{statusCode}} error occurred on server",
+	"common-error-without-status": "An error occurred on the server",
+	"common-h1": "A simple example",
+	"common-to-second-page": "To second page"
 }
