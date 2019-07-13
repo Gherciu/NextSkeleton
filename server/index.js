@@ -1,18 +1,18 @@
+/* eslint-disable import/order */
 const path = require('path')
+const isProduction = require('../utils/isProduction')
 require('dotenv').config({
-  path:
-    process.env.NODE_ENV === 'development'
-      ? path.join(__dirname, '../.env.development')
-      : path.join(__dirname, '../.env.production'),
+  path: isProduction
+    ? path.join(__dirname, '../.env.production')
+    : path.join(__dirname, '../.env.development'),
 })
 const express = require('express')
 const next = require('next')
 const nextI18NextMiddleware = require('next-i18next/middleware')
 const nextI18next = require('../utils/i18n')
-const isProd = require('../utils/isProd')
 
 const port = process.env.PORT
-const app = next({ dev: !isProd })
+const app = next({ dev: !isProduction })
 const handle = app.getRequestHandler()
 
 app.prepare().then(() => {

@@ -1,19 +1,17 @@
-/* eslint-disable import/no-extraneous-dependencies, no-param-reassign */
+/* eslint-disable import/no-extraneous-dependencies, no-param-reassign, import/order */
 const path = require('path')
+const isProduction = require('./utils/isProduction')
 require('dotenv').config({
-  path:
-    process.env.NODE_ENV === 'development'
-      ? path.join(__dirname, '/.env.development')
-      : path.join(__dirname, '/.env.production'),
+  path: isProduction
+    ? path.join(__dirname, '/.env.production')
+    : path.join(__dirname, '/.env.development'),
 })
-
 const withPlugins = require('next-compose-plugins')
 const withCSS = require('@zeit/next-css')
 const withSass = require('@zeit/next-sass')
 const withLess = require('@zeit/next-less')
 const Dotenv = require('dotenv-webpack')
 const withOptimizedImages = require('next-optimized-images')
-const isProd = require('./utils/isProd')
 
 module.exports = withPlugins(
   [
@@ -30,7 +28,7 @@ module.exports = withPlugins(
     [
       withOptimizedImages,
       {
-        optimizeImages: isProd,
+        optimizeImages: isProduction,
         handleImages: ['jpeg', 'png', 'webp', 'gif'],
         imagesName: '[name]-[hash].[ext]',
         inlineImageLimit: 8192,
@@ -39,7 +37,7 @@ module.exports = withPlugins(
     ],
   ],
   {
-    assetPrefix: isProd ? process.env.ASSET_PREFIX : '',
+    assetPrefix: isProduction ? process.env.ASSET_PREFIX : '',
     webpack: config => {
       config.resolve.alias['@pages'] = path.join(__dirname, 'pages')
       config.resolve.alias['@utils'] = path.join(__dirname, 'utils')
@@ -68,7 +66,9 @@ module.exports = withPlugins(
       config.plugins = [
         ...config.plugins,
         new Dotenv({
-          path: path.join(__dirname, '.env'),
+          path: isProduction
+            ? path.join(__dirname, '/.env.production')
+            : path.join(__dirname, '/.env.development'),
           systemvars: true,
         }),
       ]
@@ -78,7 +78,7 @@ module.exports = withPlugins(
           loader: 'file-loader',
           options: {
             name: '[name]-[hash].[ext]',
-            publicPath: isProd
+            publicPath: isProduction
               ? `${process.env.ASSET_PREFIX}/_next/static`
               : '/_next/static',
             outputPath: 'static',
@@ -105,7 +105,7 @@ module.exports = withPlugins(
               options: {
                 limit: 8192,
                 name: '[name]-[hash].[ext]',
-                publicPath: isProd
+                publicPath: isProduction
                   ? `${process.env.ASSET_PREFIX}/_next/static`
                   : '/_next/static',
                 outputPath: 'static',

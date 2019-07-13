@@ -5,7 +5,7 @@ import Router from 'next/router'
 import NProgress from 'nprogress'
 import initializeStore from '@store/index'
 import { appWithTranslation } from '@utils/i18n'
-import isProd from '@utils/isProd'
+import isProduction from '@utils/isProduction'
 import MainProvider from '@providers'
 import '@styles/tailwind.css'
 import '@styles/antd.less'
@@ -33,6 +33,6 @@ class MainApp extends App {
 }
 
 export default withRedux(initializeStore, {
-  debug: !isProd,
+  debug: !isProduction,
   storeKey: '__REDUX_STORE__',
 })(appWithTranslation(MainApp))

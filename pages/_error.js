@@ -5,7 +5,7 @@ const Error = ({ statusCode }) => <p>{statusCode}</p>
 
 Error.getInitialProps = async ({ res, err }) => {
   const statusCode = res ? res.statusCode : err && err.statusCode
-  return { statusCode }
+  return { statusCode, namespacesRequired: [] }
 }
 Error.propTypes = {
   statusCode: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
