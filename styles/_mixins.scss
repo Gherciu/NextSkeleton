@@ -1,0 +1,23 @@
+@import 'bourbon';
+@import './vars';
+
+@mixin large {
+  @media only screen and (max-width: $large) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media only screen and (max-width: $desktop) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media only screen and (max-width: $tablet) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media only screen and (max-width: $mobile) {
+    @content;
+  }
+}

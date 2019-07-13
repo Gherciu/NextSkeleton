@@ -1,9 +1,9 @@
 {
-    "apps": [
-        {
-            "name": "NextSkeleton",
-            "script": "./server/index.js",
-            "watch": false
-        }
-    ]
+  "apps": [
+    {
+      "name": "next-all-in",
+      "script": "./server/index.js",
+      "watch": false
+    }
+  ]
 }

@@ -1,14 +1,18 @@
-import { applyMiddleware, createStore } from 'redux';
-import thunkMiddleware from 'redux-thunk';
-import reducer from 'store/reducers';
-import { composeWithDevTools } from 'redux-devtools-extension/logOnlyInProduction';
-import initialState from 'store/initialState';
+import { createStore } from 'redux'
+import { composeWithDevTools } from 'redux-devtools-extension/logOnlyInProduction'
+import reducer from '@store/reducer'
 
-const initializeStore = (state = initialState) => {
-    const composeEnhancers = composeWithDevTools({
-        // options like actionSanitizer, stateSanitizer
-    });
-    return createStore(reducer, state, composeEnhancers(applyMiddleware(thunkMiddleware)));
-};
+const initializeStore = (initialState = {}) => {
+  const composeEnhancers = composeWithDevTools({
+    // options like actionSanitizer, stateSanitizer
+  })
+  const store = createStore(reducer, initialState, composeEnhancers())
+  // Make reducers hot reloadable
+  if (module.hot)
+    module.hot.accept('./reducer', () => {
+      store.replaceReducer(reducer)
+    })
+  return store
+}
 
-export default initializeStore;
+export default initializeStore

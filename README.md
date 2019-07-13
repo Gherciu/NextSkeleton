@@ -1,32 +1,35 @@
-## NextSkeleton
+## next-all-in
 
 ### Introduction
-This is a skeleton application using next.js. This application is meant to be used as a starting place for those looking to get their feet wet with Next.js.
+
+This is a starter application using next.js.
 
 ### Getting started
-- Clone the repo: `git clone https://github.com/Gherciu/NextSkeleton.git`
+
+- Clone the repo: `git clone https://github.com/Gherciu/next-all-in.git`
 - Rename `.env.example` file to `.env`
-- Start dev server: `yarn start:dev` or `yarn run start:dev`
+- Start dev server: `npm run start`
 
 ### Features
-- `ESLint` and `Stylelint` to enforce code style. Run `yarn lint:scripts` for `.js|.jsx` and `yarn lint:styles` for `*.scss` files.
+
 - `i18n` internationalization support ( Scalable apps need to support multiple languages, easily add and support multiple languages with `next-i18next`).
+- `ESLint` and `Stylelint` to enforce code style. Run `npm run lint:scripts` for `.js|.jsx` and `npm run lint:styles` for `.css|.scss` files.
 - Pre-commit hooks with `husky` and `lint-staged`
-- Useful SCSS helpers `_mixins` and `_vars`
-- Automated images optimization
-- Includes:
-  - `Normalize.css` for CSS normalizations and common bug fixes
-  - `redux`, `react-redux`, `redux-thunk` and `redux-devtools-extension` to manage app state
-  - `NProgress` page loading progress bar
-  - `dotenv` to read `.env` files in back-end and `dotenv-webpack` to read `.env` files in front-end
+- Useful SCSS helpers `_mixins` and `_vars` see all in `./src/styles`
+- `redux` and `redux-devtools` implimented and configured to work well in `development` mode and `production`. The store is hot reloadable ;)
+- Aliases for all folders (components, styles, store etc.) see all available aliases in `./next-config.js`
+- `antd` is added and configured to work well as an UI framework (css normalization is not need, antd has own)
+- All folders in `./src` have own README.md file with a little documentation and usage guide
+- `Helmet` implimented and configured, see an example in `./components/layouts/index.js`
+- Configured `tailwindcss` a utility-first CSS framework for rapidly building custom designs.
 
 ### When ready to build for production
-- Set `NODE_ENV = production` in `.env` file
-- Build the project: `yarn build` or `yarn run build`
-- Start production server: `yarn start:prod` or `yarn run start:prod`
 
-----
+- Ccreate file `.env.production` the content should be the same as in `.env.development`
+- Build the project: `npm run build`
+- Start production server: `npm run serve`
 
+---
 
 ## Contributing
 
@@ -38,10 +41,9 @@ This is a skeleton application using next.js. This application is meant to be us
 
 ## Author
 
-**@Gherciu/NextSkeleton** © [GHERCIU](https://github.com/Gherciu), Released under the [MIT](./LICENSE) License.<br>
-Authored and maintained by GHERCIU with help from contributors ([list](https://github.com/Gherciu/NextSkeleton/contributors)).
+**@Gherciu/next-all-in** © [GHERCIU](https://github.com/Gherciu), Released under the [MIT](./LICENSE) License.<br>
+Authored and maintained by GHERCIU with help from contributors ([list](https://github.com/Gherciu/next-all-in/contributors)).
 
 > [github.com/Gherciu](https://github.com/Gherciu) · GitHub [@GHERCIU](https://github.com/Gherciu)
 
-#### If you like this repository star⭐ and watch👀 on [GitHub](https://github.com/Gherciu/NextSkeleton)
-
+#### If you like this repository star⭐ and watch👀 on [GitHub](https://github.com/Gherciu/next-all-in)

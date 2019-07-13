@@ -1,5 +1,9 @@
-# dependencies
-/node_modules
-# production
-/.next
+# Dependency directories
+node_modules/
+
+# next files
+.next/
 /out
+
+/styles/*.less
+/styles/*.css
