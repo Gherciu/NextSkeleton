@@ -13,6 +13,7 @@
   },
   "scripts": {
     "build": "next build",
+    "build:static": "next build && next export",
     "start": "nodemon ./server/index.js",
     "serve": "pm2 start ./ecosystem.json",
     "lint:scripts": "eslint ./ --max-warnings=0",
