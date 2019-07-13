@@ -31,6 +31,11 @@
       "git add"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "dependencies": {
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
