@@ -10,11 +10,7 @@ const NavLink = ({ children, href, as, scroll, ...restProps }) => (
 )
 
 NavLink.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.element,
-    PropTypes.node,
-  ]).isRequired,
+  children: PropTypes.node.isRequired,
   href: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
   as: PropTypes.string,
   scroll: PropTypes.bool,

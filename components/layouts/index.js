@@ -17,7 +17,7 @@ const MainLayout = ({ children }) => (
 )
 
 MainLayout.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.element, PropTypes.node]).isRequired,
+  children: PropTypes.node.isRequired,
 }
 
 export default MainLayout

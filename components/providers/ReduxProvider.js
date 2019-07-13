@@ -7,7 +7,7 @@ const ReduxProvider = ({ children, store }) => (
 )
 
 ReduxProvider.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.element, PropTypes.node]).isRequired,
+  children: PropTypes.node.isRequired,
   store: PropTypes.oneOfType([PropTypes.object, PropTypes.func]).isRequired,
 }
 
