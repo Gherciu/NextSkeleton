@@ -19,7 +19,7 @@ This is a starter application using next.js.
 - `redux` and `redux-devtools` implimented and configured to work well in `development` mode and `production`. The store is hot reloadable ;)
 - Aliases for all folders (components, styles, store etc.) see all available aliases in `./next-config.js`
 - `antd` is added and configured to work well as an UI framework (css normalization is not need, antd has own)
-- All folders in `./src` have own README.md file with a little documentation and usage guide
+- All folders in `./` and `./components` have own README.md file with a little documentation and usage guide
 - Configured `tailwindcss` a utility-first CSS framework for rapidly building custom designs.
 
 ### When ready to build for production
