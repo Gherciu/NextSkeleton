@@ -15,7 +15,7 @@ This is a starter application using next.js.
 - `i18n` internationalization support ( Scalable apps need to support multiple languages, easily add and support multiple languages with `next-i18next`).
 - `ESLint` and `Stylelint` to enforce code style. Run `npm run lint:scripts` for `.js|.jsx` and `npm run lint:styles` for `.css|.scss` files.
 - Pre-commit hooks with `husky` and `lint-staged`
-- Useful SCSS helpers `_mixins` and `_vars` see all in `./src/styles`
+- Useful SCSS helpers `_mixins` and `_vars` see all in `./styles`
 - `redux` and `redux-devtools` implimented and configured to work well in `development` mode and `production`. The store is hot reloadable ;)
 - Aliases for all folders (components, styles, store etc.) see all available aliases in `./next-config.js`
 - `antd` is added and configured to work well as an UI framework (css normalization is not need, antd has own)
