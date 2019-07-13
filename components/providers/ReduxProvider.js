@@ -1,14 +1,14 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import PropTypes from 'prop-types'
-import initializeStore from '@store'
 
-const ReduxProvider = ({ children }) => (
-  <Provider store={initializeStore()}>{children}</Provider>
+const ReduxProvider = ({ children, store }) => (
+  <Provider store={store}>{children}</Provider>
 )
 
 ReduxProvider.propTypes = {
   children: PropTypes.oneOfType([PropTypes.element, PropTypes.node]).isRequired,
+  store: PropTypes.oneOfType([PropTypes.object, PropTypes.func]).isRequired,
 }
 
 export default ReduxProvider

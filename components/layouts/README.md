@@ -7,4 +7,4 @@ Like as:
 - DashboardLayout
 - etc...
 
-#### The index.js file is the MainLayout all Layouts should be wrapped in this component
+#### The index.js file is the MainLayout all pages should be wrapped in this component

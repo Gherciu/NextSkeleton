@@ -2,10 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ReduxProvider from '@providers/ReduxProvider'
 
-const MainProvider = ({ element }) => <ReduxProvider>{element}</ReduxProvider>
+const MainProvider = ({ children, store }) => (
+  <ReduxProvider store={store}>{children}</ReduxProvider>
+)
 
 MainProvider.propTypes = {
-  element: PropTypes.oneOfType([PropTypes.element, PropTypes.node]).isRequired,
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.node]).isRequired,
+  store: PropTypes.oneOfType([PropTypes.object, PropTypes.func]).isRequired,
 }
 
 export default MainProvider

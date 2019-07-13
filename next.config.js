@@ -6,19 +6,27 @@ require('dotenv').config({
       ? path.join(__dirname, '/.env.development')
       : path.join(__dirname, '/.env.production'),
 })
+
 const withPlugins = require('next-compose-plugins')
 const withCSS = require('@zeit/next-css')
 const withSass = require('@zeit/next-sass')
 const withLess = require('@zeit/next-less')
 const Dotenv = require('dotenv-webpack')
 const withOptimizedImages = require('next-optimized-images')
-const isProd = require('@utils/isProd')
+const isProd = require('./utils/isProd')
 
 module.exports = withPlugins(
   [
     [withSass],
-    [withLess],
     [withCSS],
+    [
+      withLess,
+      {
+        lessLoaderOptions: {
+          javascriptEnabled: true,
+        },
+      },
+    ],
     [
       withOptimizedImages,
       {
