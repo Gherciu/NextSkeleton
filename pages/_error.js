@@ -8,9 +8,8 @@ Error.getInitialProps = async ({ res, err }) => {
   return { statusCode }
 }
 Error.propTypes = {
-  statusCode: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  statusCode: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+    .isRequired,
 }
-Error.defaultProps = {
-  statusCode: null,
-}
+
 export default Error
