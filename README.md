@@ -20,7 +20,6 @@ This is a starter application using next.js.
 - Aliases for all folders (components, styles, store etc.) see all available aliases in `./next-config.js`
 - `antd` is added and configured to work well as an UI framework (css normalization is not need, antd has own)
 - All folders in `./src` have own README.md file with a little documentation and usage guide
-- `Helmet` implimented and configured, see an example in `./components/layouts/index.js`
 - Configured `tailwindcss` a utility-first CSS framework for rapidly building custom designs.
 
 ### When ready to build for production
