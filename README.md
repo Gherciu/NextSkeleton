@@ -8,7 +8,7 @@ This is a starter application using next.js.
 ### Getting started
 
 - Clone the repo: `git clone https://github.com/Gherciu/next-all-in.git`
-- Rename `.env.example` file to `.env`
+- Edit configuration variables in `.env.development` file
 - Start dev server: `npm run start`
 
 ### Features
