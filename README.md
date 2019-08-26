@@ -44,6 +44,4 @@ This is a starter application using next.js.
 **@Gherciu/next-all-in** © [GHERCIU](https://github.com/Gherciu), Released under the [MIT](./LICENSE) License.<br>
 Authored and maintained by GHERCIU with help from contributors ([list](https://github.com/Gherciu/next-all-in/contributors)).
 
-> [github.com/Gherciu](https://github.com/Gherciu) · GitHub [@GHERCIU](https://github.com/Gherciu)
-
 #### If you like this repository star⭐ and watch👀 on [GitHub](https://github.com/Gherciu/next-all-in)
