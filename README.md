@@ -7,7 +7,7 @@ This is a starter application using next.js.
 
 ### Getting started
 
-- Clone the repo: `git clone https://github.com/Gherciu/next-all-in.git`
+- Clone the repo: `git clone --depth=1 https://github.com/Gherciu/next-all-in.git <YOUR_PROJECT_NAME>`
 - Edit configuration variables in `.env.development` file
 - Start dev server: `npm run start`
 
