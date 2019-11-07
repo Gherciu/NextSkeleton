@@ -2,7 +2,7 @@
   <img width="200" height="200"
     src="https://raw.githubusercontent.com/Gherciu/next-all-in/master/static/logo.png">
   <h1>next-all-in</h1>
-  <p>This is a starter application using gatsby.js. <a href="https://next-all-in.netlify.com/" alt="next-all-in">DEMO</a>.</p>
+  <p>This is a starter application using next.js. <a href="https://next-all-in.netlify.com/" alt="next-all-in">DEMO</a>.</p>
 </div>
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b654c94e-08a6-4b79-b443-7837581b1d8d/deploy-status)](https://app.netlify.com/sites/next-all-in/deploys)
