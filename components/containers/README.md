@@ -1,10 +1,17 @@
 ### This directory should contain only section level components!
 
-Like as:
+Note: for a better reusability do not use product names. Example for a reservations based site: ReservationsList ---> ItemsList
+
+#### Like as:
+
 Header
-LastTransactionsSection
-CommissionsSection
-RegistrationForm
+
+Header
+
+ItemsList
+
+ItemsFilter
+
 Footer
 ...
 
