@@ -8,8 +8,8 @@ import { appWithTranslation } from '@utils/i18n'
 import isProduction from '@utils/isProduction'
 import MainProvider from '@providers'
 import 'nprogress/nprogress.css'
-import '@styles/tailwind.css'
 import '@styles/antd.less'
+import '@styles/tailwind.css'
 import '@styles/global.scss'
 
 class MainApp extends App {
