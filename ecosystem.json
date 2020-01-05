@@ -3,7 +3,10 @@
     {
       "name": "next-all-in",
       "script": "./server/index.js",
-      "watch": false
+      "watch": false,
+      "env": {
+        "NODE_ENV": "production"
+      }
     }
   ]
 }
