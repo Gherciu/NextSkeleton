@@ -46,7 +46,7 @@
     "express": "^4.16.4",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
-    "next": "^8.0.4",
+    "next": "^9.3.2",
     "next-i18next": "^0.36.0",
     "next-redux-wrapper": "^3.0.0-alpha.2",
     "nprogress": "^0.2.0",
